@@ -1,0 +1,85 @@
+\begin{thebibliography}{11}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Burke et~al.(2021)Burke, Driscoll, Heft-Neal, Xue, Burney, and
+  Wara]{wildfire-risk}
+Marshall Burke, Anne Driscoll, Sam Heft-Neal, Jiani Xue, Jennifer Burney, and
+  Michael Wara.
+\newblock The changing risk and burden of wildfire in the united states.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 118\penalty0
+  (2):\penalty0 e2011048118, 2021.
+\newblock \doi{10.1073/pnas.2011048118}.
+\newblock URL \url{{https://www.pnas.org/doi/abs/10.1073/pnas.2011048118}}.
+
+\bibitem[Chen et~al.(2018)Chen, Zhu, Papandreou, Schroff, and Adam]{dlv3p}
+Liang-Chieh Chen, Yukun Zhu, George Papandreou, Florian Schroff, and Hartwig
+  Adam.
+\newblock Encoder-decoder with atrous separable convolution for semantic image
+  segmentation, 2018.
+\newblock URL \url{{https://arxiv.org/abs/1802.02611}}.
+
+\bibitem[Cheng~Ju and van~der Laan(2018)]{nn-ensemble2}
+Aurélien~Bibaut Cheng~Ju and Mark van~der Laan.
+\newblock The relative performance of ensemble methods with deep convolutional
+  neural networks for image classification.
+\newblock \emph{Journal of Applied Statistics}, 45\penalty0 (15):\penalty0
+  2800--2818, 2018.
+\newblock \doi{10.1080/02664763.2018.1441383}.
+\newblock URL \url{{https://doi.org/10.1080/02664763.2018.1441383}}.
+\newblock PMID: 31631918.
+
+\bibitem[Dietterich(2000)]{ensemble-ml}
+Thomas~G. Dietterich.
+\newblock Ensemble methods in machine learning.
+\newblock \emph{Multiple Classifier Systems}, pages 1--15, 2000.
+
+\bibitem[Goodman et~al.(2019)Goodman, Schmit, Daniels, and Redmon]{GOESbook}
+S.~J. Goodman, T.~J. Schmit, J.~Daniels, and R.~J. Redmon.
+\newblock \emph{The GOES-R Series: A New Generation of Geostationary
+  Environmental Satellites}.
+\newblock Elsevier, 2019.
+
+\bibitem[Hansen and Salamon(1990)]{nn-ensemble}
+L.K. Hansen and P.~Salamon.
+\newblock Neural network ensembles.
+\newblock \emph{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}, 12\penalty0 (10):\penalty0 993--1001, 1990.
+\newblock \doi{10.1109/34.58871}.
+
+\bibitem[Iakubovskii(2019)]{semantic}
+Pavel Iakubovskii.
+\newblock Segmentation models pytorch.
+\newblock \url{https://github.com/qubvel/segmentation_models.pytorch}, 2019.
+
+\bibitem[Kuncheva and Whitaker(2003)]{ensemble-diversity}
+Ludmila~I. Kuncheva and Christopher~J. Whitaker.
+\newblock Measures of diversity in classifier ensembles and their relationship
+  with the ensemble accuracy.
+\newblock \emph{Machine Learning}, 51\penalty0 (2):\penalty0 181--207, 2003.
+\newblock ISSN 1573-0565.
+\newblock \doi{10.1023/A:1022859003006}.
+\newblock URL \url{{https://doi.org/10.1023/A:1022859003006}}.
+
+\bibitem[Li et~al.(2018)Li, Xiong, An, and Wang]{PAN}
+Hanchao Li, Pengfei Xiong, Jie An, and Lingxue Wang.
+\newblock Pyramid attention network for semantic segmentation.
+\newblock \emph{CoRR}, abs/1805.10180, 2018.
+\newblock URL \url{{http://arxiv.org/abs/1805.10180}}.
+
+\bibitem[McNamara et~al.(2004)McNamara, Stephens, Ruminski, and Kasheta]{hms}
+Donna McNamara, George Stephens, Mark Ruminski, and Tim Kasheta.
+\newblock The hazard mapping system (hms) - noaa's multi-sensor fire and smoke
+  detection program using environmental satellites.
+\newblock \emph{Conference on Satellite Meteorology and Oceanography}, 01 2004.
+
+\bibitem[Zhou et~al.(2018)Zhou, Siddiquee, Tajbakhsh, and Liang]{UNetpp}
+Zongwei Zhou, Md~Mahfuzur~Rahman Siddiquee, Nima Tajbakhsh, and Jianming Liang.
+\newblock Unet++: A nested u-net architecture for medical image segmentation.
+\newblock \emph{CoRR}, abs/1807.10165, 2018.
+\newblock URL \url{{http://arxiv.org/abs/1807.10165}}.
+
+\end{thebibliography}
