@@ -1,4 +1,4 @@
-\begin{thebibliography}{11}
+\begin{thebibliography}{13}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -36,6 +36,17 @@ Aurélien~Bibaut Cheng~Ju and Mark van~der Laan.
 Thomas~G. Dietterich.
 \newblock Ensemble methods in machine learning.
 \newblock \emph{Multiple Classifier Systems}, pages 1--15, 2000.
+
+\bibitem[Giacinto and Roli(2001)]{nn-error-ens}
+Giorgio Giacinto and Fabio Roli.
+\newblock Design of effective neural network ensembles for image classification
+  purposes.
+\newblock \emph{Image and Vision Computing}, 19\penalty0 (9):\penalty0
+  699--707, 2001.
+\newblock ISSN 0262-8856.
+\newblock \doi{https://doi.org/10.1016/S0262-8856(01)00045-2}.
+\newblock URL
+  \url{https://www.sciencedirect.com/science/article/pii/S0262885601000452}.
 
 \bibitem[Goodman et~al.(2019)Goodman, Schmit, Daniels, and Redmon]{GOESbook}
 S.~J. Goodman, T.~J. Schmit, J.~Daniels, and R.~J. Redmon.
@@ -75,6 +86,15 @@ Donna McNamara, George Stephens, Mark Ruminski, and Tim Kasheta.
 \newblock The hazard mapping system (hms) - noaa's multi-sensor fire and smoke
   detection program using environmental satellites.
 \newblock \emph{Conference on Satellite Meteorology and Oceanography}, 01 2004.
+
+\bibitem[Minaee et~al.(2022)Minaee, Boykov, Porikli, Plaza, Kehtarnavaz, and
+  Terzopoulos]{cv-segmentation-review}
+Shervin Minaee, Yuri Boykov, Fatih Porikli, Antonio Plaza, Nasser Kehtarnavaz,
+  and Demetri Terzopoulos.
+\newblock Image segmentation using deep learning: A survey.
+\newblock \emph{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}, 44\penalty0 (7):\penalty0 3523--3542, 2022.
+\newblock \doi{10.1109/TPAMI.2021.3059968}.
 
 \bibitem[Zhou et~al.(2018)Zhou, Siddiquee, Tajbakhsh, and Liang]{UNetpp}
 Zongwei Zhou, Md~Mahfuzur~Rahman Siddiquee, Nima Tajbakhsh, and Jianming Liang.

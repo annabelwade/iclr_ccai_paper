@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.23)  23 JAN 2025 17:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.23)  25 JAN 2025 23:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -264,24 +264,24 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
 
 (C:\Users\annab\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
@@ -308,31 +308,31 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 15.
+Package hyperref Info: Link coloring OFF on input line 14.
  (main.out) (main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 18.
+(Font)              <7> on input line 17.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 18.
+(Font)              <5> on input line 17.
  [1
 
 {C:/Users/annab/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-<ensemble_framework.png, id=58, 962.59625pt x 477.785pt>
+<ensemble_framework.png, id=66, 962.59625pt x 477.785pt>
 File: ensemble_framework.png Graphic file (type png)
 <use ensemble_framework.png>
-Package pdftex.def Info: ensemble_framework.png  used on input line 55.
-(pdftex.def)             Requested size: 317.9892pt x 157.82993pt.
- (main.bbl [2 <./ensemble_framework.png>]
-Underfull \hbox (badness 1983) in paragraph at lines 54--57
+Package pdftex.def Info: ensemble_framework.png  used on input line 50.
+(pdftex.def)             Requested size: 337.86465pt x 167.69383pt.
+ [2 <./ensemble_framework.png>] (main.bbl
+Underfull \hbox (badness 1983) in paragraph at lines 65--68
 []\OT1/cmr/m/n/10 Pavel Iakubovskii.  Seg-men-ta-tion mod-els py-torch.  []$\OT
 1/cmtt/m/n/10 https : / / github . com / qubvel /
  []
 
 
-Underfull \hbox (badness 1112) in paragraph at lines 80--84
+Underfull \hbox (badness 1112) in paragraph at lines 100--104
 \OT1/cmr/m/n/10 Unet++: A nested u-net ar-chi-tec-ture for med-i-cal im-age seg
 -men-ta-tion.  \OT1/cmr/m/it/10 CoRR\OT1/cmr/m/n/10 ,
  []
@@ -346,22 +346,22 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 808022DC37F07870CF055B4465B95B69;497.
  ) 
 Here is how much of TeX's memory you used:
- 9706 strings out of 474486
- 152508 string characters out of 5743755
+ 9714 strings out of 474486
+ 152702 string characters out of 5743755
  1941542 words of memory out of 5000000
- 31877 multiletter control sequences out of 15000+600000
+ 31883 multiletter control sequences out of 15000+600000
  560641 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,79p,1273b,545s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,12n,79p,1273b,441s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/annab/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmbx10.pfb><C:/Users/annab/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmcsc10.pfb><C:/Users/annab/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/amsfonts/cm/cmr10.pfb><C:/Users/annab/AppData/Local/Programs/MiKTeX/font
 s/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/annab/AppData/Local/Programs/Mi
 KTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (3 pages, 908941 bytes).
+Output written on main.pdf (3 pages, 912666 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
- 21 named destinations out of 1000 (max. 500000)
+ 129 PDF objects out of 1000 (max. 8388607)
+ 23 named destinations out of 1000 (max. 500000)
  38 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -4,9 +4,8 @@
 \usepackage{url}
 \usepackage{hyperref} % Load hyperref after natbib
 
-\title{Improving on Deep Learning-Based Smoke Detection with a Multi-Model Ensemble Approach
-% Exploring Multi-Model Ensembling Methods to Improve on Deep Learning Based Smoke Detection
-}
+% prev title: Exploring Multi-Model Ensembling Methods to Improve on Deep Learning Based Smoke Detection
+\title{Improving Deep Learning-Based Smoke\\ Plume Detection with a Multi-Model\\ Ensemble Approach}
 \author{Author Name \\
 Institution \\
 \texttt{email@example.com}
@@ -22,47 +21,60 @@ Institution \\
 % \end{abstract}
 
 \begin{abstract}
-With the increasing frequency and severity of wildfires associated with climate change, there is an urgent need for effective and rapid wildfire and smoke detection tools. Recent advancements in computer vision have demonstrated the potential of deep learning models to automate the semantic segmentation of high-resolution images by training encoder-decoder networks on large labeled datasets. However, single-model approaches can struggle with generalization and accuracy in diverse conditions. To address these challenges, we propose creating an ensemble of deep learning models to produce accurate and representative predictions of wildfire smoke plumes and their relative density (low, medium, high) in Geostationary Operational Environmental Satellite (GOES) imagery. Our preliminary results indicate that this ensemble technique can significantly improve performance compared to using a single model. This multi-model data-driven ensemble is expected to support fire and hazard management by being able to automate the monitoring of smoke in real-time from satellite imagery, providing a valuable tool for fire and hazard management in the face of worsening widfires.
+With the increasing frequency and severity of wildfires, there is an urgent need for effective and rapid wildfire and smoke detection tools. Recent advancements in computer vision have demonstrated the potential of deep learning models, particularly neural networks, to automate the partitioning of high-resolution images into labelled segments. However, single-model approaches can struggle with generalization and accuracy in diverse conditions. To address these challenges, we propose creating an ensemble of deep learning models to produce accurate and representative predictions of wildfire smoke plumes and their relative density (low, medium, high) in Geostationary Operational Environmental Satellite (GOES) imagery. Our results indicate that this ensemble technique can significantly improve performance compared to using a single model. This multi-model ensemble is expected to support fire and hazard management by being able to automate the monitoring of smoke in real-time from satellite imagery, providing a valuable tool for fire and hazard management in the face of worsening wildfires.
 \end{abstract}
 
 \section{Introduction}
-
-Climate change is driving an increase in the frequency and severity of wildfires [CITATION]. Wildfires increase smoke and particulate matter in the atmosphere [CITATION], posing more risks of respiratory issues and other air quality-induced health problems in recent years \citep{wildfire-risk}. Effective and timely wildfire and smoke detection tools are thus essential for supporting hazard management and mitigating risks to human health. 
-
-The NOAA Geostationary Operational Environmental Satellites (GOES) provide high spatial and temporal resolution imagery of North America \citep{GOESbook}, which can be leveraged to detect the presence and density of smoke plumes. The Hazard Mapping System (HMS) Fire and Smoke Product currently relies on human analysts to annotate the presence of smoke over North America using imagery from the GOES imagery \citep{hms}. However, this product is limited by the availability of human analysts, outputting annotations once to several times a day.
-
-To address this limitation in the frequency of smoke data, we are leveraging advancements in deep learning to automate the detection of smoke from GOES imagery. Deep learning models, particularly encoder-decoder neural networks, have shown promise in automating the semantic segmentation of high-resolution images [CITATIONS]. By automating this task, we can enable more frequent and consistent detection of smoke plumes.
-
-This proposal focuses on enhancing the capability of smoke detection with deep learning through the use of multi-model ensemble techniques. It has been shown for classification that ensemble methods that combine the predictions of multiple classifers can often perform better than a single classifer \citep{ensemble-ml}. Particularly, utilizing a diverse set of classifiers in an ensemble is important to achieve the improvement in performance \citep{ensemble-diversity}. In the neural network setting, combining the predictions of multiple independently-trained models can improve generalization and prediction accuracy of neural networks \citep{nn-ensemble}, \citep{nn-ensemble2}. 
-
-This approach aims to provide a more reliable and accurate tool for real-time monitoring of smoke, ultimately supporting fire and hazard management efforts and contributing to climate resilience and adaptation strategies.
-
-% to add: references for how wildfire are increasing with climate change.
+% should i include this, to pertain to the climate change workshop? do i have room??? *** both these studies sitck to Western US
+% Anthropogenic climate change drives warmer, drier conditions, leading to increased risk of severe wildfires \citep{cc-fire} \citep{climate-fire-risk}.
 % from CCAI site: Each submission should make clear why the application has (or could have) a pathway to positive impacts regarding climate change.
-% from CCAI site: Authors should clearly illustrate a pathway to climate impact, i.e., identify the way in which this work fits into broader efforts to address climate change.
+% from CCAI site: Authors should clearly illustrate a pathway to climate impact, i.e., identify the way in which this work fits into broader efforts to address climate change. 
+Wildfires increase smoke and particulate matter in the atmosphere, posing more risks of respiratory issues and other air quality-induced health problems in recent years \citep{wildfire-risk}. Effective and timely wildfire and smoke detection tools are thus essential for supporting hazard management and mitigating risks to human health. 
+
+The NOAA Geostationary Operational Environmental Satellites (GOES) provide high spatial and temporal resolution imagery of North America \citep{GOESbook}, which can be leveraged to detect the presence and density of smoke plumes. The Hazard Mapping System (HMS) Fire and Smoke Product currently relies on human analysts to annotate the presence of smoke over North America using imagery from the GOES imagery \citep{hms}. However, this product is limited by the availability of human analysts, outputting annotations once to several times a day. To address this limitation in the frequency of smoke data, we are leveraging advancements in deep learning to automate the detection of smoke from GOES imagery. Deep learning models, particularly encoder-decoder neural networks, have shown promise in automating the semantic segmentation (labelling images on a pixel-wise basis with multiple classes) of high-resolution images \citep{cv-segmentation-review}. By automating this task, we can enable more frequent and consistent detection of smoke plumes.
+
+This proposal focuses on enhancing the capability of smoke detection with deep learning through the use of multi-model ensemble techniques. It has been shown for classification that ensemble methods that combine the predictions of multiple classifers can often perform better than a single classifer \citep{ensemble-ml}. Particularly, utilizing a diverse set of classifiers in an ensemble is important to achieve the improvement in performance \citep{ensemble-diversity}. In the neural network setting, combining the predictions of multiple independently-trained models can improve generalization and prediction accuracy of neural networks \citep{nn-ensemble}, \citep{nn-ensemble2}, \citep{nn-error-ens}. This approach aims to provide a more reliable and accurate tool for real-time monitoring of smoke, ultimately supporting fire and hazard management efforts and contributing to climate resilience and adaptation strategies.
+% \citep{nn-error-ens} demonstrated the importance of the neural networks having independent errors, or "error diversity" for the ensemble to succeed. it also provided a mathematical basis (clustering of errors) for designing ensembles that contain error diversity between the models.
 
 % \section{Related Work}
-
 \section{Data and Methods}
+The dataset we use consists of 183,672 samples, each with three spectral channels (C1-C3) of GOES imagery paired with HMS smoke annotations (pixel-wise labels of smoke density of low, medium, or high) for a specific datetime and location. The data spans 2018-2024, and we set aside 2023 for validation and 2022 for testing, with the remaining years used for training. 
 
-The dataset we use consists of 183,672 samples, each with three spectral channels (C1-C3) of GOES imagery paired with HMS smoke annotations (pixel-wise labels of smoke density low, medium, or high) for a specific datetime and location. The data spans 2018-2024, and we set aside 2023 for validation and 2022 for testing, with the remaining years used for training. 
+We are utilizing a variety of pre-developed encoder-decoder architectures that were designed for semantic segmentation contained within the Segmentation Models package \citep{semantic}. These architectures include different features such as multi-scale fields-of-view and precise boundary localization \citep{dlv3p}, \citep{PAN}, \citep{UNetpp}, which are important for accurately detecting smoke plumes that can vary in size and appearance. A collection of these models are trained independently on 8 Nvidia P100 GPUs using the Adam optimizer with a learning rate of 0.001 and batch size of 128. 
+% should i say HOW MANY? models
+% describe the ensemble method. “unweighted average”
+The ensemble method we are using is an unweighted average of the predictions of the models. This method is straightforward to implement and has been shown to be effective in practice \citep{nn-ensemble2}. This ensemble framework is shown in Figure \ref{fig:ensemble_framework}. 
 
-We are utilizing a variety of pre-developed encoder-decoder architectures that were created and optimized for semantic segmentation (labelling images on a pixel-wise basis with multiple classes) contained within the Segmentation Models package \citep{semantic}. The differences between these architectures consists of features such as atrous spatial pyramid pooling, model scaling, and residual connections \citep{dlv3p}, \citep{PAN}, \citep{UNetpp}. A collection of these models are trained independently on 8 Nvidia P100 GPUs using the Adam optimizer with a learning rate of 0.001 and batch size of 128. 
-
-% include the image ensemble_framework.png here
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.8\textwidth]{ensemble_framework.png}
+    \includegraphics[width=0.85\textwidth]{ensemble_framework.png}
     \caption{Multi-Model Ensemble Framework.}
     \label{fig:ensemble_framework}
 \end{figure}
 
+% In this case, IoU is the best metric because it directly reflects the model's ability to correctly identify smoke plumes, which is essential for making informed decisions in real-time scenarios.
+% would omit iou but want to address the following: also dont want to throw numbers at people with no explanation, but am short on space. should i add the equation??? ***
+% workshop site: Outline key metrics: Quantitative or qualitative assessments of how well your results (or for proposals, anticipated results) compare to existing methods are encouraged. Try to give a sense of the importance of your problem and your findings. We encourage you to convey why the particular metrics you choose are relevant from a climate change perspective. For instance, if you are evaluating your machine learning model on the basis of accuracy, how does improved accuracy on a machine learning model translate to climate impact, and why is accuracy the best metric to use in this context?
 
 \section{Results}
-results
+We measure model performance in terms of Intersection over Union (IoU) score which quantifies the alignment between the model predicted and the ground truth. 
+
+- table with the results of a handful of architectures along with best ensemble score 
+
+- plot of ensemble size versus IoU score (can make this plot for the three classes of smoke too)
+
+- discuss: combinations of ensembles in terms of best individual score (potentially, for each density of smoke)
+
+- discuss: how the ensemble improves performance over the best individual model
+
+- why is there a plateau in the current ensemble size plot? How can I explore potential explanations for this? 
 
 \section{Conclusions and Future Work}
-conclusions
+- We created an ensemble of architecturally-diverse deep learning models that improves on Test IoU and smoothes jagged boundaries.
+
+- This multi-model data-driven ensemble can be used to automate the monitoring of smoke from GOES imagery.
+
+- We are experimenting with more ensemble techniques (e.g. regional modelsz) to improve performance.
 
 
 \bibliographystyle{plainnat}
