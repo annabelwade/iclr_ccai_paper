@@ -43,71 +43,57 @@ This proposal focuses on enhancing the capability of smoke detection with deep l
 \section{Data and Methods}
 The dataset we use consists of 183,672 samples, each with three spectral channels (C01-C03) of GOES imagery paired with HMS smoke annotations (pixel-wise labels of smoke density of light, medium, or heavy) for a specific datetime and location. The data spans 2018-2024, and we set aside 2023 for validation and 2022 for testing, with the remaining years used for training. 
 
-We are utilizing a variety of pre-developed encoder-decoder architectures that were designed for semantic segmentation contained within the Segmentation Models package \citep{semantic}. These architectures include different features such as multi-scale fields-of-view and precise boundary localization \citep{dlv3p}, \citep{PAN}, \citep{UNetpp}, which are important for accurately detecting smoke plumes that can vary in size and appearance. A collection of these models are trained independently on 8 Nvidia P100 GPUs using the Adam optimizer with a learning rate of 0.001 and batch size of 128. 
-% should i say HOW MANY? models
-% describe the ensemble method. “unweighted average”
-The ensemble method we are using is an unweighted average of the predictions of the models. This method is straightforward to implement and has been shown to be effective in practice \citep{nn-ensemble2}. This ensemble framework is shown in Figure \ref{fig:ensemble_framework}. 
+We are utilizing a variety of pre-developed encoder-decoder architectures that were designed for semantic segmentation contained within the Segmentation Models package \citep{semantic}. These architectures include different features such as multi-scale fields-of-view and precise boundary localization \citep{dlv3p}, \citep{PAN}, \citep{UNetpp}, which are important for accurately detecting smoke plumes that can vary in size and appearance. Additionally, we selected one of these architectures and trained it with 12 different random seeds to generate different initial random weights before training. These models are trained independently for 24 hours on 8 Nvidia P100 GPUs using the Adam optimizer, a learning rate of 0.001, a binary cross entropy loss function, and batch size of 128. Each model gets selected based on its best validation IoU score.
 
+The ensemble method we are using is an unweighted average of the predictions of the models. This method is straightforward to implement and has been shown to be effective in practice \citep{nn-ensemble2}. This ensemble framework is shown in Figure \ref{fig:ensemble_framework}. To preliminary test what combinations of models would improve on testing performance, we experimented with different ensemble sizes (1-12 models) for combinations of different architectures and with different initial seeds.
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.85\textwidth]{ensemble_framework.png}
+    \includegraphics[width=0.75\textwidth]{ensemble_framework.png}
     \caption{Multi-Model Ensemble Framework.}
     \label{fig:ensemble_framework}
 \end{figure}
-
-% In this case, IoU is the best metric because it directly reflects the model's ability to correctly identify smoke plumes, which is essential for making informed decisions in real-time scenarios.
-% would omit iou but want to address the following: also dont want to throw numbers at people with no explanation, but am short on space. should i add the equation??? ***
-% workshop site: Outline key metrics: Quantitative or qualitative assessments of how well your results (or for proposals, anticipated results) compare to existing methods are encouraged. Try to give a sense of the importance of your problem and your findings. We encourage you to convey why the particular metrics you choose are relevant from a climate change perspective. For instance, if you are evaluating your machine learning model on the basis of accuracy, how does improved accuracy on a machine learning model translate to climate impact, and why is accuracy the best metric to use in this context?
-
 \section{Results}
-We measure model performance in terms of Intersection over Union (IoU) score (Equation \ref{overall_iou}) which quantifies the alignment between the model predicted and the ground truth. 
+We measure model performance in terms of Intersection over Union (IoU) score (Equation \ref{overall_iou}) which quantifies the alignment between the model prediction ($ y^*_{i} $) and the ground truth ($y_{i}$). Table \ref{tab:results} shows the IoU scores for individual models and ensembles. The ensemble of 8 models with different architectures outperforms the individual models, with an improvement in the IoU score for all densities of smoke and over all densities. The ensemble of 8 models with different initial weights also outperforms the individual models, with a similar improvement in the IoU score. Figure \ref{fig:ensemble_size_plot} shows the IoU performance over all smoke densities as a function of ensemble size for the two ensemble schemes. The ensemble of 8 models with different initial weights improves with more models in the ensemble. This improvement is likely due to the different initializations allowing the models to search different parts of the parameter space and find different minima of the loss. The ensemble of 8 models with different architectures improves with more models in the ensemble up to 8 models, but then plateaus in performance. This plateau in performance could be due to the additional architectures not being as well suited for the task, or the models not having enough diversity in their errors to improve ensemble performance.
 
+Figure \ref{fig:ensemble_panel} shows an example of smoke plume detection from the testing dataset. The ensemble predictions show smoother boundaries, making the prediction more comparable to the human-drawn polygon annotations.
 \begin{equation} \label{overall_iou}
-    \text{IoU}_{\text{overall}} = \frac{\sum\limits_{i=\text{light}}^{\text{heavy}}|y_{i}\cap y^*_{i}|}{\sum\limits_{i=\text{light}}^{\text{heavy}}|y_{i}|\cup|y^*_{i}|}
+    \text{IoU}_{\text{overall}} = {\sum\limits_{i=\text{light}}^{\text{heavy}}|y_{i}\cap y^*_{i}|} \div {\sum\limits_{i=\text{light}}^{\text{heavy}}|y_{i}|\cup|y^*_{i}|}
 \end{equation}
-
+% \begin{equation} \label{overall_iou}
+%     \text{IoU}_{\text{overall}} = \frac{\sum\limits_{i=\text{light}}^{\text{heavy}}|y_{i}\cap y^*_{i}|}{\sum\limits_{i=\text{light}}^{\text{heavy}}|y_{i}|\cup|y^*_{i}|}
+% \end{equation}
 \begin{table}[h]
     \centering
     \begin{tabular}{llrrr>{\bfseries}r}
         \hline
-         Architecture   &   Heavy IoU &   Medium IoU &   Light IoU &   Overall IoU \\
+            &   Heavy &   Medium &   Light &   Overall \\
         \hline
-         DeepLabV3Plus  &   0.347077 &     0.441486 &  0.666248 &      0.59859  \\
-         PSPNet         &   0.374195 &     0.482493 &  0.651067 &      0.59614  \\
-         LinkNet        &   0.360252 &     0.469944 &  0.620847 &      0.570342 \\
-         \rowcolor{yellow} Ensemble (N=8) &   0.399515 &     0.507199 &  0.691542 &      0.634591 \\
-        \hline
+         Single Model: DLV3P &   0.347 &     0.441 &  0.666 &      0.599  \\
+         Single Model: PAN &  0.349 &     0.478 &  0.664 &      0.604 \\
+        %  \rowcolor{gray!20}
+         Architecture Ensemble (N=8) &   0.400 &     0.507 &  0.692 &      0.635 \\
+        %  Architecture Ensemble (N=12) &  0.400 &     0.504 &  0.686 &      0.630 \\
+         Random Initial Weights Ensemble (N=8) &  0.409 &     0.512 &  0.684 &      0.631 \\
+        %  Random Initial Weights Ensemble (N=12) &   0.409 &     0.515 &  0.690 &      0.635 \\
+         \hline
     \end{tabular}
-    \caption{IoU results across three classes of smoke (light, medium, heavy) and over all densities. Prsented for different individual models  of different architectures, along with the ensemble (N=8) performance.}
+    \caption{IoU results across three classes of smoke (light, medium, heavy) and over all densities. Presented for different individual models of different architectures (\citep{dlv3p}; \citep{PAN}), along with the archiecture-based ensemble and random initial weights ensemble performance, where N denotes the number of models in the ensemble.}
     \label{tab:results}
     \end{table}
-
-
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.75\textwidth]{ensemble_size_plot.png}
-    \caption{Ensemble IoU Performance over all smoke densities as a function of the number of models in the ensemble. Three different schemes of ensemble design are shown. }
+    \caption{Ensemble IoU Performance over all smoke densities as a function of ensemble size. Presented for two different schemes of ensemble design: random initial weights (blue) and architecure-based (red).}
     \label{fig:ensemble_size_plot}
 \end{figure}
-
-- add a sample demonstrating the smoothing of boundaries in ensemble compared to individual model preds
-
-- discuss: made combinations of ensembles in terms of best individual score 
-% (potentially, for each density of smoke)
-
-- discuss: how the ensemble improves performance over the best individual model
-
-- why is there a plateau in the current ensemble size plot? How can I explore potential explanations for this? 
-
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{ensemble_panel_tinypaper.png}
+    \caption{Example of smoke plume detection from GOES imagery with two individual models and two ensembles. Panel A displays the ground truth HMS annotation; Panels B-C show the predictions of two individual models; Panel D shows the prediction of an architecture-based ensemble of 8 models; Panel E shows the prediction of an ensemble made with 8 models with different random initial weights.}
+    \label{fig:ensemble_panel}
+\end{figure}
 \section{Conclusions and Future Work}
-- We created an ensemble of architecturally-diverse deep learning models that improves on Test IoU and smoothes jagged boundaries.
-
-- This multi-model data-driven ensemble can be used to automate the monitoring of smoke from GOES imagery.
-
-- We are experimenting with more ensemble techniques (e.g. regional modelsz) to improve performance.
-
-- climate change implications of these results...
-
+We explored two schemes for making ensembles of deep learning models that both improve on testing set IoU and make the predictions more realistic. There is more to be investigates, such as why the architecture-based ensemble plateaus in performance after 8 models, and how a combination of the two ensemble schemes will perform. We are also experimenting with other ensemble techniques, such as regionally-trained models, to improve detection of smoke. The ensemble of deep learning models is expected to support fire and hazard management by automating the monitoring of smoke in real-time from satellite imagery. This tool can be used to provide more frequent and consistent detection of smoke plumes, ultimately supporting climate resilience and adaptation strategies.
 \bibliographystyle{plainnat}
 \bibliography{references}
 
@@ -127,5 +113,7 @@ We measure model performance in terms of Intersection over Union (IoU) score (Eq
 % Outline key metrics: Quantitative or qualitative assessments of how well your results (or for proposals, anticipated results) compare to existing methods are encouraged. Try to give a sense of the importance of your problem and your findings. We encourage you to convey why the particular metrics you choose are relevant from a climate change perspective. For instance, if you are evaluating your machine learning model on the basis of accuracy, how does improved accuracy on a machine learning model translate to climate impact, and why is accuracy the best metric to use in this context?
 % Be clear and concise: The discussion of impact does not need to be lengthy, just clear.
 % Convey the big picture: Ultimately, the goal of Climate Change AI is to “empower work that meaningfully addresses the climate crisis.” Try to make sure that from the beginning, you contextualize your method and its impacts in terms of this objective
-
+% In this case, IoU is the best metric because it directly reflects the model's ability to correctly identify smoke plumes, which is essential for making informed decisions in real-time scenarios.
+% would omit iou but want to address the following: also dont want to throw numbers at people with no explanation, but am short on space. should i add the equation??? ***
+% workshop site: Outline key metrics: Quantitative or qualitative assessments of how well your results (or for proposals, anticipated results) compare to existing methods are encouraged. Try to give a sense of the importance of your problem and your findings. We encourage you to convey why the particular metrics you choose are relevant from a climate change perspective. For instance, if you are evaluating your machine learning model on the basis of accuracy, how does improved accuracy on a machine learning model translate to climate impact, and why is accuracy the best metric to use in this context?
 \end{document}

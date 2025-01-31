@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.23)  30 JAN 2025 23:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.23)  31 JAN 2025 14:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -404,33 +404,36 @@ Package hyperref Info: Link coloring OFF on input line 17.
 <ensemble_framework.png, id=66, 962.59625pt x 477.785pt>
 File: ensemble_framework.png Graphic file (type png)
 <use ensemble_framework.png>
-Package pdftex.def Info: ensemble_framework.png  used on input line 53.
-(pdftex.def)             Requested size: 337.86465pt x 167.69383pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<ensemble_size_plot.png, id=69, 513.92pt x 333.245pt>
+Package pdftex.def Info: ensemble_framework.png  used on input line 51.
+(pdftex.def)             Requested size: 298.11374pt x 147.966pt.
+ [2 <./ensemble_framework.png>]
+<ensemble_size_plot.png, id=102, 912.2883pt x 296.7888pt>
 File: ensemble_size_plot.png Graphic file (type png)
 <use ensemble_size_plot.png>
-Package pdftex.def Info: ensemble_size_plot.png  used on input line 88.
-(pdftex.def)             Requested size: 298.11374pt x 193.31273pt.
+Package pdftex.def Info: ensemble_size_plot.png  used on input line 85.
+(pdftex.def)             Requested size: 298.11374pt x 96.98053pt.
+<ensemble_panel_tinypaper.png, id=103, 1166.6787pt x 292.2117pt>
+File: ensemble_panel_tinypaper.png Graphic file (type png)
+<use ensemble_panel_tinypaper.png>
+Package pdftex.def Info: ensemble_panel_tinypaper.png  used on input line 91.
+(pdftex.def)             Requested size: 397.48499pt x 99.55576pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[2 <./ensemble_framework.png>] (main.bbl [3 <./ensemble_size_plot.png>]
+(main.bbl [3 <./ensemble_size_plot.png>]
 Underfull \hbox (badness 1983) in paragraph at lines 65--68
 []\OT1/cmr/m/n/10 Pavel Iakubovskii.  Seg-men-ta-tion mod-els py-torch.  []$\OT
 1/cmtt/m/n/10 https : / / github . com / qubvel /
  []
 
-
+[4 <./ensemble_panel_tinypaper.png>]
 Underfull \hbox (badness 1112) in paragraph at lines 100--104
 \OT1/cmr/m/n/10 Unet++: A nested u-net ar-chi-tec-ture for med-i-cal im-age seg
 -men-ta-tion.  \OT1/cmr/m/it/10 CoRR\OT1/cmr/m/n/10 ,
  []
 
-) [4] (main.aux)
+) [5] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -439,13 +442,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 808022DC37F07870CF055B4465B95B69;497.
  ) 
 Here is how much of TeX's memory you used:
- 10581 strings out of 474486
- 164602 string characters out of 5743755
+ 10591 strings out of 474486
+ 164880 string characters out of 5743755
  1941542 words of memory out of 5000000
- 32722 multiletter control sequences out of 15000+600000
+ 32730 multiletter control sequences out of 15000+600000
  561095 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,12n,79p,1276b,554s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,79p,1417b,575s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/annab/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmbx10.pfb><C:/Users/annab/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmcsc10.pfb><C:/Users/annab/AppData/Local/Programs/MiKTeX/fonts/type1/
@@ -459,9 +462,9 @@ s/annab/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
 <C:/Users/annab/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
 ti10.pfb><C:/Users/annab/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
 nts/cm/cmtt10.pfb>
-Output written on main.pdf (4 pages, 1034792 bytes).
+Output written on main.pdf (5 pages, 1735644 bytes).
 PDF statistics:
- 173 PDF objects out of 1000 (max. 8388607)
- 27 named destinations out of 1000 (max. 500000)
- 43 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 190 PDF objects out of 1000 (max. 8388607)
+ 29 named destinations out of 1000 (max. 500000)
+ 48 words of extra memory for PDF output out of 10000 (max. 10000000)
 
