@@ -3,6 +3,9 @@
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{hyperref} % Load hyperref after natbib
+\usepackage{amsmath}
+\usepackage{colortbl} % For coloring table cells
+
 
 % prev title: Exploring Multi-Model Ensembling Methods to Improve on Deep Learning Based Smoke Detection
 \title{Improving Deep Learning-Based Wildfire\\ Smoke Plume Detection with a Multi-Model\\ Ensemble Approach}
@@ -38,7 +41,7 @@ This proposal focuses on enhancing the capability of smoke detection with deep l
 
 % \section{Related Work}
 \section{Data and Methods}
-The dataset we use consists of 183,672 samples, each with three spectral channels (C01-C03) of GOES imagery paired with HMS smoke annotations (pixel-wise labels of smoke density of low, medium, or high) for a specific datetime and location. The data spans 2018-2024, and we set aside 2023 for validation and 2022 for testing, with the remaining years used for training. 
+The dataset we use consists of 183,672 samples, each with three spectral channels (C01-C03) of GOES imagery paired with HMS smoke annotations (pixel-wise labels of smoke density of light, medium, or heavy) for a specific datetime and location. The data spans 2018-2024, and we set aside 2023 for validation and 2022 for testing, with the remaining years used for training. 
 
 We are utilizing a variety of pre-developed encoder-decoder architectures that were designed for semantic segmentation contained within the Segmentation Models package \citep{semantic}. These architectures include different features such as multi-scale fields-of-view and precise boundary localization \citep{dlv3p}, \citep{PAN}, \citep{UNetpp}, which are important for accurately detecting smoke plumes that can vary in size and appearance. A collection of these models are trained independently on 8 Nvidia P100 GPUs using the Adam optimizer with a learning rate of 0.001 and batch size of 128. 
 % should i say HOW MANY? models
@@ -57,16 +60,35 @@ The ensemble method we are using is an unweighted average of the predictions of 
 % workshop site: Outline key metrics: Quantitative or qualitative assessments of how well your results (or for proposals, anticipated results) compare to existing methods are encouraged. Try to give a sense of the importance of your problem and your findings. We encourage you to convey why the particular metrics you choose are relevant from a climate change perspective. For instance, if you are evaluating your machine learning model on the basis of accuracy, how does improved accuracy on a machine learning model translate to climate impact, and why is accuracy the best metric to use in this context?
 
 \section{Results}
-We measure model performance in terms of Intersection over Union (IoU) score \ref{overall_iou} which quantifies the alignment between the model predicted and the ground truth. 
-
+We measure model performance in terms of Intersection over Union (IoU) score (Equation \ref{overall_iou}) which quantifies the alignment between the model predicted and the ground truth. 
 
 \begin{equation} \label{overall_iou}
-    IoU_{\text{overall}} = \frac{\sum\limits_{i=\text{light}}^{\text{heavy}}|y_{i}\cap y^*_{i}|}{\sum\limits_{i=\text{light}}^{\text{heavy}}|y_{i}|\cup|y^*_{i}|}
+    \text{IoU}_{\text{overall}} = \frac{\sum\limits_{i=\text{light}}^{\text{heavy}}|y_{i}\cap y^*_{i}|}{\sum\limits_{i=\text{light}}^{\text{heavy}}|y_{i}|\cup|y^*_{i}|}
 \end{equation}
 
-- Add table with the testing IoU results of a handful of architectures along with best ensemble score 
+\begin{table}[h]
+    \centering
+    \begin{tabular}{llrrr>{\bfseries}r}
+        \hline
+         Architecture   &   Heavy IoU &   Medium IoU &   Light IoU &   Overall IoU \\
+        \hline
+         DeepLabV3Plus  &   0.347077 &     0.441486 &  0.666248 &      0.59859  \\
+         PSPNet         &   0.374195 &     0.482493 &  0.651067 &      0.59614  \\
+         LinkNet        &   0.360252 &     0.469944 &  0.620847 &      0.570342 \\
+         \rowcolor{yellow} Ensemble (N=8) &   0.399515 &     0.507199 &  0.691542 &      0.634591 \\
+        \hline
+    \end{tabular}
+    \caption{IoU results across three classes of smoke (light, medium, heavy) and over all densities. Prsented for different individual models  of different architectures, along with the ensemble (N=8) performance.}
+    \label{tab:results}
+    \end{table}
 
-- Add plot of ensemble size VS. IoU (can make this plot for the three classes of smoke too)
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.75\textwidth]{ensemble_size_plot.png}
+    \caption{Ensemble IoU Performance over all smoke densities as a function of the number of models in the ensemble. Three different schemes of ensemble design are shown. }
+    \label{fig:ensemble_size_plot}
+\end{figure}
 
 - add a sample demonstrating the smoothing of boundaries in ensemble compared to individual model preds
 
