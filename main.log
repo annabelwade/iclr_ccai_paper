@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.23)  31 JAN 2025 16:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.23)  3 FEB 2025 16:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -359,11 +359,41 @@ Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
 \minrowclearance=\skip72
 \rownum=\count293
 )
+(C:\Users\annab\AppData\Local\Programs\MiKTeX\tex/latex/sidecap\sidecap.sty
+Package: sidecap 2023/01/24 v1.7a SideCap Package (RN/HjG)
+
+(C:\Users\annab\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+\SC@BOXWD=\dimen171
+\SC@CAPWD=\dimen172
+\SC@tempdima=\dimen173
+\SC@tempdimb=\dimen174
+\c@SC@C=\count294
+\SC@BOX=\box57
+)
+(C:\Users\annab\AppData\Local\Programs\MiKTeX\tex/latex/ragged2e\ragged2e.sty
+Package: ragged2e 2023/06/22 v3.6 ragged2e Package
+\CenteringLeftskip=\skip73
+\RaggedLeftLeftskip=\skip74
+\RaggedRightLeftskip=\skip75
+\CenteringRightskip=\skip76
+\RaggedLeftRightskip=\skip77
+\RaggedRightRightskip=\skip78
+\CenteringParfillskip=\skip79
+\RaggedLeftParfillskip=\skip80
+\RaggedRightParfillskip=\skip81
+\JustifyingParfillskip=\skip82
+\CenteringParindent=\skip83
+\RaggedLeftParindent=\skip84
+\RaggedRightParindent=\skip85
+\JustifyingParindent=\skip86
+)
 (C:\Users\annab\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count294
-\l__pdf_internal_box=\box57
+\l__color_backend_stack_int=\count295
+\l__pdf_internal_box=\box58
 ) (main.aux)
 \openout1 = `main.aux'.
 
@@ -389,16 +419,16 @@ LaTeX Font Info:    ... okay on input line 25.
 (C:\Users\annab\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count295
-\scratchdimen=\dimen171
-\scratchbox=\box58
-\nofMPsegments=\count296
-\nofMParguments=\count297
+\scratchcounter=\count296
+\scratchdimen=\dimen175
+\scratchbox=\box59
+\nofMPsegments=\count297
+\nofMParguments=\count298
 \everyMPshowfont=\toks26
-\MPscratchCnt=\count298
-\MPscratchDim=\dimen172
-\MPnumerator=\count299
-\makeMPintoPDFobject=\count300
+\MPscratchCnt=\count299
+\MPscratchDim=\dimen176
+\MPnumerator=\count300
+\makeMPintoPDFobject=\count301
 \everyMPtoPDFconversion=\toks27
 )
 (C:\Users\annab\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
@@ -413,6 +443,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
+Package caption Info: sidecap package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring OFF on input line 25.
  (main.out) (main.out)
@@ -422,23 +453,23 @@ Package hyperref Info: Link coloring OFF on input line 25.
  [1
 
 {C:/Users/annab/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-<ensemble_framework.png, id=62, 1282.03969pt x 573.64313pt>
+<ensemble_framework.png, id=64, 1282.03969pt x 573.64313pt>
 File: ensemble_framework.png Graphic file (type png)
 <use ensemble_framework.png>
-Package pdftex.def Info: ensemble_framework.png  used on input line 48.
+Package pdftex.def Info: ensemble_framework.png  used on input line 55.
 (pdftex.def)             Requested size: 278.23827pt x 124.49503pt.
- [2 <./ensemble_framework.png>]
-<ensemble_size_plot.png, id=97, 912.2883pt x 296.7888pt>
+<ensemble_size_plot.png, id=77, 912.2883pt x 296.7888pt>
 File: ensemble_size_plot.png Graphic file (type png)
 <use ensemble_size_plot.png>
-Package pdftex.def Info: ensemble_size_plot.png  used on input line 77.
+Package pdftex.def Info: ensemble_size_plot.png  used on input line 87.
 (pdftex.def)             Requested size: 278.23827pt x 90.51366pt.
-<ensemble_panel_tinypaper.png, id=98, 1166.6787pt x 292.2117pt>
+<ensemble_panel_tinypaper.png, id=78, 1166.6787pt x 267.1581pt>
 File: ensemble_panel_tinypaper.png Graphic file (type png)
 <use ensemble_panel_tinypaper.png>
-Package pdftex.def Info: ensemble_panel_tinypaper.png  used on input line 83.
-(pdftex.def)             Requested size: 357.73405pt x 89.59929pt.
- (main.bbl [3 <./ensemble_size_plot.png> <./ensemble_panel_tinypaper.png>]
+Package pdftex.def Info: ensemble_panel_tinypaper.png  used on input line 93.
+(pdftex.def)             Requested size: 397.48499pt x 91.02007pt.
+ [2 <./ensemble_framework.png>] (main.bbl [3 <./ensemble_size_plot.png> <./ense
+mble_panel_tinypaper.png>]
 Underfull \hbox (badness 1983) in paragraph at lines 65--68
 []\OT1/cmr/m/n/10 Pavel Iakubovskii.  Seg-men-ta-tion mod-els py-torch.  []$\OT
 1/cmtt/m/n/10 https : / / github . com / qubvel /
@@ -459,13 +490,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 808022DC37F07870CF055B4465B95B69;497.
  ) 
 Here is how much of TeX's memory you used:
- 11904 strings out of 474486
- 190433 string characters out of 5743755
+ 12145 strings out of 474486
+ 194784 string characters out of 5743755
  1942542 words of memory out of 5000000
- 34038 multiletter control sequences out of 15000+600000
+ 34268 multiletter control sequences out of 15000+600000
  561095 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,12n,79p,1447b,460s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,79p,1243b,550s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/annab/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmbx10.pfb><C:/Users/annab/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmcsc10.pfb><C:/Users/annab/AppData/Local/Programs/MiKTeX/fonts/type1/
@@ -479,9 +510,9 @@ s/annab/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
 <C:/Users/annab/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
 ti10.pfb><C:/Users/annab/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
 nts/cm/cmtt10.pfb>
-Output written on main.pdf (4 pages, 1569197 bytes).
+Output written on main.pdf (4 pages, 1537072 bytes).
 PDF statistics:
- 180 PDF objects out of 1000 (max. 8388607)
+ 181 PDF objects out of 1000 (max. 8388607)
  28 named destinations out of 1000 (max. 500000)
  48 words of extra memory for PDF output out of 10000 (max. 10000000)
 
