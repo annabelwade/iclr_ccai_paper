@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.23)  3 FEB 2025 16:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.23)  3 FEB 2025 18:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -453,17 +453,17 @@ Package hyperref Info: Link coloring OFF on input line 25.
  [1
 
 {C:/Users/annab/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-<ensemble_framework.png, id=64, 1282.03969pt x 573.64313pt>
+<ensemble_framework.png, id=68, 1282.03969pt x 573.64313pt>
 File: ensemble_framework.png Graphic file (type png)
 <use ensemble_framework.png>
 Package pdftex.def Info: ensemble_framework.png  used on input line 55.
 (pdftex.def)             Requested size: 278.23827pt x 124.49503pt.
-<ensemble_size_plot.png, id=77, 912.2883pt x 296.7888pt>
+<ensemble_size_plot.png, id=81, 912.2883pt x 296.7888pt>
 File: ensemble_size_plot.png Graphic file (type png)
 <use ensemble_size_plot.png>
 Package pdftex.def Info: ensemble_size_plot.png  used on input line 87.
 (pdftex.def)             Requested size: 278.23827pt x 90.51366pt.
-<ensemble_panel_tinypaper.png, id=78, 1166.6787pt x 267.1581pt>
+<ensemble_panel_tinypaper.png, id=82, 1166.6787pt x 267.1581pt>
 File: ensemble_panel_tinypaper.png Graphic file (type png)
 <use ensemble_panel_tinypaper.png>
 Package pdftex.def Info: ensemble_panel_tinypaper.png  used on input line 93.
@@ -487,13 +487,13 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 808022DC37F07870CF055B4465B95B69;497.
+(rerunfilecheck)             Checksum: D07C0068748A35EB04925EF4DAF0890A;653.
  ) 
 Here is how much of TeX's memory you used:
- 12145 strings out of 474486
- 194784 string characters out of 5743755
+ 12147 strings out of 474486
+ 194804 string characters out of 5743755
  1942542 words of memory out of 5000000
- 34268 multiletter control sequences out of 15000+600000
+ 34269 multiletter control sequences out of 15000+600000
  561095 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,11n,79p,1243b,550s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -510,9 +510,9 @@ s/annab/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
 <C:/Users/annab/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
 ti10.pfb><C:/Users/annab/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
 nts/cm/cmtt10.pfb>
-Output written on main.pdf (4 pages, 1537072 bytes).
+Output written on main.pdf (4 pages, 1539135 bytes).
 PDF statistics:
- 181 PDF objects out of 1000 (max. 8388607)
- 28 named destinations out of 1000 (max. 500000)
- 48 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 187 PDF objects out of 1000 (max. 8388607)
+ 29 named destinations out of 1000 (max. 500000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
