@@ -1,0 +1,80 @@
+\begin{thebibliography}{10}
+
+\bibitem{wildfire-risk}
+Marshall Burke, Anne Driscoll, Sam Heft-Neal, Jiani Xue, Jennifer Burney, and
+  Michael Wara.
+\newblock The changing risk and burden of wildfire in the united states.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  118(2):e2011048118, 2021.
+
+\bibitem{GOESbook}
+S.~J. Goodman, T.~J. Schmit, J.~Daniels, and R.~J. Redmon.
+\newblock {\em The GOES-R Series: A New Generation of Geostationary
+  Environmental Satellites}.
+\newblock Elsevier, 2019.
+
+\bibitem{hms}
+Donna McNamara, George Stephens, Mark Ruminski, and Tim Kasheta.
+\newblock The hazard mapping system (hms) - noaa's multi-sensor fire and smoke
+  detection program using environmental satellites.
+\newblock {\em Conference on Satellite Meteorology and Oceanography}, 01 2004.
+
+\bibitem{cv-segmentation-review}
+Shervin Minaee, Yuri Boykov, Fatih Porikli, Antonio Plaza, Nasser Kehtarnavaz,
+  and Demetri Terzopoulos.
+\newblock Image segmentation using deep learning: A survey.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  44(7):3523--3542, 2022.
+
+\bibitem{ensemble-ml}
+Thomas~G. Dietterich.
+\newblock Ensemble methods in machine learning.
+\newblock {\em Multiple Classifier Systems}, pages 1--15, 2000.
+
+\bibitem{ensemble-diversity}
+Ludmila~I. Kuncheva and Christopher~J. Whitaker.
+\newblock Measures of diversity in classifier ensembles and their relationship
+  with the ensemble accuracy.
+\newblock {\em Machine Learning}, 51(2):181--207, 2003.
+
+\bibitem{nn-ensemble}
+L.K. Hansen and P.~Salamon.
+\newblock Neural network ensembles.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  12(10):993--1001, 1990.
+
+\bibitem{nn-ensemble2}
+Aurélien~Bibaut Cheng~Ju and Mark van~der Laan.
+\newblock The relative performance of ensemble methods with deep convolutional
+  neural networks for image classification.
+\newblock {\em Journal of Applied Statistics}, 45(15):2800--2818, 2018.
+\newblock PMID: 31631918.
+
+\bibitem{nn-error-ens}
+Giorgio Giacinto and Fabio Roli.
+\newblock Design of effective neural network ensembles for image classification
+  purposes.
+\newblock {\em Image and Vision Computing}, 19(9):699--707, 2001.
+
+\bibitem{semantic}
+Pavel Iakubovskii.
+\newblock Segmentation models pytorch.
+\newblock \url{https://github.com/qubvel/segmentation_models.pytorch}, 2019.
+
+\bibitem{dlv3p}
+Liang-Chieh Chen, Yukun Zhu, George Papandreou, Florian Schroff, and Hartwig
+  Adam.
+\newblock Encoder-decoder with atrous separable convolution for semantic image
+  segmentation, 2018.
+
+\bibitem{PAN}
+Hanchao Li, Pengfei Xiong, Jie An, and Lingxue Wang.
+\newblock Pyramid attention network for semantic segmentation.
+\newblock {\em CoRR}, abs/1805.10180, 2018.
+
+\bibitem{UNetpp}
+Zongwei Zhou, Md~Mahfuzur~Rahman Siddiquee, Nima Tajbakhsh, and Jianming Liang.
+\newblock Unet++: A nested u-net architecture for medical image segmentation.
+\newblock {\em CoRR}, abs/1807.10165, 2018.
+
+\end{thebibliography}
