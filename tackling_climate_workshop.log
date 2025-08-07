@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.23)  7 AUG 2025 16:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.23)  7 AUG 2025 16:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -653,7 +653,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 88
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 90
 .
 
 (C:\Users\annab\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
@@ -672,7 +672,7 @@ b/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
 <ensemble_framework.png, id=71, 1282.03969pt x 573.64313pt>
 File: ensemble_framework.png Graphic file (type png)
 <use ensemble_framework.png>
-Package pdftex.def Info: ensemble_framework.png  used on input line 132.
+Package pdftex.def Info: ensemble_framework.png  used on input line 130.
 (pdftex.def)             Requested size: 278.23827pt x 124.49503pt.
 
 
@@ -682,7 +682,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <ensemble_panel_tinypaper.png, id=100, 1166.6787pt x 267.1581pt>
 File: ensemble_panel_tinypaper.png Graphic file (type png)
 <use ensemble_panel_tinypaper.png>
-Package pdftex.def Info: ensemble_panel_tinypaper.png  used on input line 160.
+Package pdftex.def Info: ensemble_panel_tinypaper.png  used on input line 158.
 (pdftex.def)             Requested size: 397.48499pt x 91.02007pt.
  [3 <./ensemble_framework.png> <./ensemble_panel_tinypaper.png>]
 (tackling_climate_workshop.bbl
@@ -695,12 +695,12 @@ Underfull \hbox (badness 1394) in paragraph at lines 60--63
 <ensemble_size_plot.png, id=121, 912.2883pt x 296.7888pt>
 File: ensemble_size_plot.png Graphic file (type png)
 <use ensemble_size_plot.png>
-Package pdftex.def Info: ensemble_size_plot.png  used on input line 180.
+Package pdftex.def Info: ensemble_size_plot.png  used on input line 178.
 (pdftex.def)             Requested size: 278.23827pt x 90.51366pt.
 <smoothing_ex.png, id=122, 1441.63594pt x 323.70938pt>
 File: smoothing_ex.png Graphic file (type png)
 <use smoothing_ex.png>
-Package pdftex.def Info: smoothing_ex.png  used on input line 187.
+Package pdftex.def Info: smoothing_ex.png  used on input line 185.
 (pdftex.def)             Requested size: 397.48499pt x 89.25003pt.
  [5 <./ensemble_size_plot.png> <./smoothing_ex.png>]
 (tackling_climate_workshop.aux)
@@ -708,16 +708,20 @@ Package pdftex.def Info: smoothing_ex.png  used on input line 187.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `tackling_climate_workshop.out' has not chang
 ed.
 (rerunfilecheck)             Checksum: 72924025D7C1A8775246A74BC259127D;1449.
  ) 
 Here is how much of TeX's memory you used:
- 14916 strings out of 474486
- 243182 string characters out of 5743755
- 1944542 words of memory out of 5000000
+ 14919 strings out of 474486
+ 243209 string characters out of 5743755
+ 1943542 words of memory out of 5000000
  36770 multiletter control sequences out of 15000+600000
- 598194 words of font info for 174 fonts, out of 8000000 for 9000
+ 598324 words of font info for 176 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  72i,11n,79p,1317b,488s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\annab\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt
@@ -734,7 +738,7 @@ annab/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/
 annab/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users
 /annab/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users
 /annab/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on tackling_climate_workshop.pdf (5 pages, 2875605 bytes).
+Output written on tackling_climate_workshop.pdf (5 pages, 2875595 bytes).
 PDF statistics:
  226 PDF objects out of 1000 (max. 8388607)
  37 named destinations out of 1000 (max. 500000)
