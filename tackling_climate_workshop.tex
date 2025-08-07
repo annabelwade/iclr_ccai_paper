@@ -103,16 +103,21 @@ This proposal focuses on enhancing the capability of deep learning models to det
 % \section{Related Work}
 % dont really have room for this!
 
-\section{Data and Methods}
-The dataset we use consists of 183,672 samples, each with three spectral channels (C01-C03) of GOES imagery paired with HMS smoke annotations (pixel-wise labels of smoke density of light, medium, or heavy) for a specific time and location. The data spans 2018-2024, and we use 2023 for validation and 2022 for testing, with the remaining years used for training. This ensures the testing and validation data are independent of the training data.
+\section{Proposed Methods}
+We utilize a variety of pre-developed encoder-decoder architectures that were designed for semantic segmentation contained within the Segmentation Models Pytorch library \citep{semantic}. We select architectures that include different features such as multi-scale fields-of-view and precise boundary detection \citep{dlv3p,PAN,UNetpp}, which are important for accurately detecting smoke plumes that can vary in size. Additionally, we select the best-performing single architecture and trained it with 12 different seeds to generate different initial random weights. These models were trained independently for 24 hours on 8 Nvidia P100 GPUs using the Adam optimizer and the binary cross entropy loss function. 
 
-We utilize a variety of pre-developed encoder-decoder architectures that were designed for semantic segmentation contained within the Segmentation Models Pytorch library \citep{semantic}. We select architectures that include different features such as multi-scale fields-of-view and precise boundary detection \citep{dlv3p,PAN,UNetpp}, which are important for accurately detecting smoke plumes that can vary in size. Additionally, we select the best-performing single architecture and trained it with 12 different seeds to generate different initial random weights. These models are trained independently for 24 hours on 8 Nvidia P100 GPUs using the Adam optimizer, a learning rate of 1e-3, a binary cross entropy loss function, and batch size of 128. After training, each model is selected based on its best validation Intersection over Union (IoU) score (Equation \ref{overall_iou}) which quantifies the alignment between the model prediction ($ y^*_{i} $) and the ground truth ($y_{i}$).
+
+The ensemble method we are using in this preliminary analysis is an unweighted average of $N$ model outputs \citep{nn-ensemble2}. A schematic of this approach is shown in Figure \ref{fig:ensemble_framework}. To explore how performance improves with a variety of model combinations, we vary the number of ensemble members (1-12 models) for combinations of model architectures and initial random seeds. To our knowledge, these ensemble methods have not yet been used for wildfire smoke detection.
+
+\subsection{Dataset}
+The dataset we use consists of 183,672 samples, each with three spectral channels (C01-C03) of GOES imagery paired with HMS smoke annotations (pixel-wise labels of smoke density of light, medium, or heavy) for a specific time and location. The data spans 2018-2024, and we use 2023 for the validation set and 2022 for the test set, with the remaining years used for training. This ensures the testing and validation data are independent of the training data.
+
+\subsection{Metrics} We quantify model performance with Intersection over Union (IoU) score (Equation \ref{overall_iou}), which measures pixel-wise alignment between the model prediction ($y^*_{i}$) and the ground truth ($y_{i}$). Validation IoU is used throughout training, and test IoU is used to analyze model performance after training. The IoU metric supports pathways to climate impact since improved IoU score directly translates to more smoke being accurately detected (reducing false detections and increasing true detections) which equips hazard management to appropriately respond to current wildfire and smoke conditions.
 \begin{equation} \label{overall_iou}
     \text{IoU}_{\text{overall}} = {\sum\limits_{i=\text{light}}^{\text{heavy}}|y_{i}\cap y^*_{i}|} \div {\sum\limits_{i=\text{light}}^{\text{heavy}}|y_{i}|\cup|y^*_{i}|}
 \end{equation}
 % We encourage you to communicate why the particular metrics you choose are relevant from a climate change perspective. For instance, if you are evaluating your machine learning model on the basis of accuracy, how does improved accuracy on a machine learning model translate to climate impact, and why is accuracy the best metric to use in this context?
-% Could the IoU equation be put in the supplementary materials, for space? maybe it's more worthwile to discuss why improved IoU translates to climate impact
-The ensemble method we are using in this preliminary analysis is an unweighted average of $N$ model outputs \citep{nn-ensemble2}. A schematic of this approach is shown in Figure \ref{fig:ensemble_framework}. To explore how performance improves with a variety of model combinations, we vary the number of ensemble members (1-12 models) for combinations of model architectures and initial random seeds. To our knowledge, these ensemble methods have not yet been used for wildfire smoke detection.
+
 % \begin{figure}[h]
 %     \centering
 %     \includegraphics[width=0.7\textwidth]{ensemble_framework.png}
@@ -126,12 +131,12 @@ The ensemble method we are using in this preliminary analysis is an unweighted a
     \label{fig:ensemble_framework}
 \end{SCfigure}
 \section{Preliminary Results}
-Table \ref{tab:results} shows the IoU scores for individual models and ensembles. The ensemble of 8 different architectures outperforms the individual models, with an improvement in all IoU metrics. The ensemble of 8 different initial weights (but the same architecture, PAN) also outperforms the individual models, with a similar improvement in the IoU scores. This improvement is likely due to the different initializations leading to the models searching different parts of the parameter space and thus finding different minima of the loss function. Future work is necessary to reveal the mechanisms behind the ensemble's improvement in performance, as well as how to optimally select models that are included in the ensemble.
+Table \ref{tab:results} shows the IoU scores on the test set for individual models and ensembles. The ensemble of 8 different architectures outperforms the individual models, with an improvement in all IoU metrics. The ensemble of 8 different initial weights (but the same architecture, PAN) also outperforms the individual models, with a similar improvement in the IoU scores. This improvement is likely due to the different initializations leading to the models searching different parts of the parameter space and thus finding different minima of the loss function. Future work is necessary to reveal the mechanisms behind the ensemble's improvement in performance, as well as how to optimally select models that are included in the ensemble.
 
 Figure \ref{fig:ensemble_panel} shows an example of smoke plume detection from the testing dataset. The ensemble predictions have smoother boundaries than the individual model outputs, making the prediction more comparable to the human-drawn polygon annotations.
 \begin{table}[h]
     \centering
-    \caption{IoU results across three classes of smoke density (light, medium, heavy) and over all densities with two single models and two ensemble schemes. N denotes the number of models in the ensemble.}
+    \caption{Test IoU results across three classes of smoke density (light, medium, heavy) and over all densities with two single models and two ensemble schemes. N denotes the number of models in the ensemble.}
     \label{tab:results}
     \begin{tabular}{llrrr>{\bfseries}r}
         \hline

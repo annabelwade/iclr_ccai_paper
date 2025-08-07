@@ -13,26 +13,28 @@
 \citation{semantic}
 \citation{dlv3p,PAN,UNetpp}
 \citation{nn-ensemble2}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Data and Methods}{2}{section.2}\protected@file@percent }
-\newlabel{overall_iou}{{1}{2}{Data and Methods}{equation.2.1}{}}
-\newlabel{SC@1}{{\caption@xref {??}{ on input line 127}}{2}{Data and Methods}{figure.caption.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Proposed Methods}{2}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Dataset}{2}{subsection.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Metrics}{2}{subsection.2.2}\protected@file@percent }
+\newlabel{overall_iou}{{1}{2}{Metrics}{equation.2.1}{}}
+\newlabel{SC@1}{{\caption@xref {??}{ on input line 132}}{2}{Metrics}{figure.caption.2}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces \RaggedRight  Multi-Model Ensemble Framework. GOES imagery is inputted to $N$ independently-trained models whose output is combined with an unweighted average to produce the ensemble prediction of pixel-wise smoke labels.}}{2}{figure.caption.2}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:ensemble_framework}{{1}{2}{\RaggedRight Multi-Model Ensemble Framework. GOES imagery is inputted to $N$ independently-trained models whose output is combined with an unweighted average to produce the ensemble prediction of pixel-wise smoke labels}{figure.caption.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Preliminary Results}{2}{section.3}\protected@file@percent }
 \citation{dlv3p}
 \citation{PAN}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Preliminary Results}{3}{section.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Test IoU results across three classes of smoke density (light, medium, heavy) and over all densities with two single models and two ensemble schemes. N denotes the number of models in the ensemble.}}{3}{table.caption.3}\protected@file@percent }
+\newlabel{tab:results}{{1}{3}{Test IoU results across three classes of smoke density (light, medium, heavy) and over all densities with two single models and two ensemble schemes. N denotes the number of models in the ensemble}{table.caption.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Example of smoke plume detection at (43.37, -123.25) on 2022/10/15 15:50 UTC. Red contours outline the heavy density smoke, orange contours outline the medium density smoke, and yellow contours outline the light density smoke annotations. Panel A displays the ground truth annotation; Panels B-C show the predictions of two individual models; Panel D shows the prediction of an architecture-based ensemble (N=8); Panel E shows the prediction of an ensemble (N=8) made with models initialized with different random weights.}}{3}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:ensemble_panel}{{2}{3}{Example of smoke plume detection at (43.37, -123.25) on 2022/10/15 15:50 UTC. Red contours outline the heavy density smoke, orange contours outline the medium density smoke, and yellow contours outline the light density smoke annotations. Panel A displays the ground truth annotation; Panels B-C show the predictions of two individual models; Panel D shows the prediction of an architecture-based ensemble (N=8); Panel E shows the prediction of an ensemble (N=8) made with models initialized with different random weights}{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Limitations and Future Work}{3}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Pathways to Climate Impact}{3}{section.5}\protected@file@percent }
 \bibstyle{unsrt}
 \bibdata{references}
 \bibcite{wildfire-risk}{{1}{}{{}}{{}}}
 \bibcite{GOESbook}{{2}{}{{}}{{}}}
 \bibcite{hms}{{3}{}{{}}{{}}}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces IoU results across three classes of smoke density (light, medium, heavy) and over all densities with two single models and two ensemble schemes. N denotes the number of models in the ensemble.}}{3}{table.caption.3}\protected@file@percent }
-\newlabel{tab:results}{{1}{3}{IoU results across three classes of smoke density (light, medium, heavy) and over all densities with two single models and two ensemble schemes. N denotes the number of models in the ensemble}{table.caption.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Example of smoke plume detection at (43.37, -123.25) on 2022/10/15 15:50 UTC. Red contours outline the heavy density smoke, orange contours outline the medium density smoke, and yellow contours outline the light density smoke annotations. Panel A displays the ground truth annotation; Panels B-C show the predictions of two individual models; Panel D shows the prediction of an architecture-based ensemble (N=8); Panel E shows the prediction of an ensemble (N=8) made with models initialized with different random weights.}}{3}{figure.caption.4}\protected@file@percent }
-\newlabel{fig:ensemble_panel}{{2}{3}{Example of smoke plume detection at (43.37, -123.25) on 2022/10/15 15:50 UTC. Red contours outline the heavy density smoke, orange contours outline the medium density smoke, and yellow contours outline the light density smoke annotations. Panel A displays the ground truth annotation; Panels B-C show the predictions of two individual models; Panel D shows the prediction of an architecture-based ensemble (N=8); Panel E shows the prediction of an ensemble (N=8) made with models initialized with different random weights}{figure.caption.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Limitations and Future Work}{3}{section.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5}Pathways to Climate Impact}{3}{section.5}\protected@file@percent }
 \bibcite{cv-segmentation-review}{{4}{}{{}}{{}}}
 \bibcite{ensemble-ml}{{5}{}{{}}{{}}}
 \bibcite{ensemble-diversity}{{6}{}{{}}{{}}}
@@ -45,9 +47,9 @@
 \bibcite{UNetpp}{{13}{}{{}}{{}}}
 \@writefile{toc}{\contentsline {section}{\numberline {6}Supplementary Material}{4}{section.6}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Data and Code Availability}{4}{subsection.6.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Ensemble Size Analysis}{4}{subsection.6.2}\protected@file@percent }
 \providecommand\NAT@force@numbers{}\NAT@force@numbers
-\newlabel{SC@2}{{\caption@xref {??}{ on input line 175}}{5}{Ensemble Size Analysis}{figure.caption.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Ensemble Size Analysis}{5}{subsection.6.2}\protected@file@percent }
+\newlabel{SC@2}{{\caption@xref {??}{ on input line 180}}{5}{Ensemble Size Analysis}{figure.caption.6}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces \RaggedRight  Overall IoU as a function of $N$ for two ensemble design schemes: random initial weights (blue) and architecure-based (red).}}{5}{figure.caption.6}\protected@file@percent }
 \newlabel{fig:ensemble_size_plot}{{3}{5}{\RaggedRight Overall IoU as a function of $N$ for two ensemble design schemes: random initial weights (blue) and architecure-based (red)}{figure.caption.6}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Example of smoke plume detection at (44.24, -122.74) on 2022/09/27 15:30 UTC. Red contours outline the heavy density smoke, orange contours outline the medium density smoke, and yellow contours outline the light density smoke annotations. The first panel displays the ground truth HMS annotation; the second panel is the individual model output of DLV3P; the following panels the prediction of an architecture-based ensemble as it increases in size, $N$.}}{5}{figure.caption.7}\protected@file@percent }
