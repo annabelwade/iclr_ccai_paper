@@ -7,6 +7,12 @@ Marshall Burke, Anne Driscoll, Sam Heft-Neal, Jiani Xue, Jennifer Burney, and
 \newblock {\em Proceedings of the National Academy of Sciences},
   118(2):e2011048118, 2021.
 
+\bibitem{health-impacts}
+Wayne~E. Cascio.
+\newblock Wildland fire smoke and human health.
+\newblock {\em The Science of the Total Environment}, 624:586--595, 05 2018.
+\newblock Epub 2017 Dec 27.
+
 \bibitem{GOESbook}
 S.~J. Goodman, T.~J. Schmit, J.~Daniels, and R.~J. Redmon.
 \newblock {\em The GOES-R Series: A New Generation of Geostationary
@@ -18,13 +24,6 @@ Donna McNamara, George Stephens, Mark Ruminski, and Tim Kasheta.
 \newblock The hazard mapping system (hms) - noaa's multi-sensor fire and smoke
   detection program using environmental satellites.
 \newblock {\em Conference on Satellite Meteorology and Oceanography}, 01 2004.
-
-\bibitem{cv-segmentation-review}
-Shervin Minaee, Yuri Boykov, Fatih Porikli, Antonio Plaza, Nasser Kehtarnavaz,
-  and Demetri Terzopoulos.
-\newblock Image segmentation using deep learning: A survey.
-\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  44(7):3523--3542, 2022.
 
 \bibitem{ensemble-ml}
 Thomas~G. Dietterich.
