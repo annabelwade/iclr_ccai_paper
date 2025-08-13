@@ -20,6 +20,71 @@ journal = {Conference on Satellite Meteorology and Oceanography}
   note         = {Epub 2017 Dec 27},
 }
 
+@article{pm2.5-stack,
+title = {Development of a stacked ensemble model for forecasting and analyzing daily average PM2.5 concentrations in Beijing, China},
+journal = {Science of The Total Environment},
+volume = {635},
+pages = {644-658},
+year = {2018},
+issn = {0048-9697},
+doi = {https://doi.org/10.1016/j.scitotenv.2018.04.040},
+url = {https://www.sciencedirect.com/science/article/pii/S0048969718311975},
+author = {Binxu Zhai and Jianguo Chen},
+keywords = {Air quality forecast, Feature extraction, Feature selection, Stacked generalization strategy, Feature importance analysis},
+abstract = {A stacked ensemble model is developed for forecasting and analyzing the daily average concentrations of fine particulate matter (PM2.5) in Beijing, China. Special feature extraction procedures, including those of simplification, polynomial, transformation and combination, are conducted before modeling to identify potentially significant features based on an exploratory data analysis. Stability feature selection and tree-based feature selection methods are applied to select important variables and evaluate the degrees of feature importance. Single models including LASSO, Adaboost, XGBoost and multi-layer perceptron optimized by the genetic algorithm (GA-MLP) are established in the level 0 space and are then integrated by support vector regression (SVR) in the level 1 space via stacked generalization. A feature importance analysis reveals that nitrogen dioxide (NO2) and carbon monoxide (CO) concentrations measured from the city of Zhangjiakou are taken as the most important elements of pollution factors for forecasting PM2.5 concentrations. Local extreme wind speeds and maximal wind speeds are considered to extend the most effects of meteorological factors to the cross-regional transportation of contaminants. Pollutants found in the cities of Zhangjiakou and Chengde have a stronger impact on air quality in Beijing than other surrounding factors. Our model evaluation shows that the ensemble model generally performs better than a single nonlinear forecasting model when applied to new data with a coefficient of determination (R2) of 0.90 and a root mean squared error (RMSE) of 23.69μg/m3. For single pollutant grade recognition, the proposed model performs better when applied to days characterized by good air quality than when applied to days registering high levels of pollution. The overall classification accuracy level is 73.93%, with most misclassifications made among adjacent categories. The results demonstrate the interpretability and generalizability of the stacked ensemble model.}
+}
+
+@Article{rainfall-stack,
+AUTHOR = {Gu, Jiayue and Liu, Shuguang and Zhou, Zhengzheng and Chalov, Sergey R. and Zhuang, Qi},
+TITLE = {A Stacking Ensemble Learning Model for Monthly Rainfall Prediction in the Taihu Basin, China},
+JOURNAL = {Water},
+VOLUME = {14},
+YEAR = {2022},
+NUMBER = {3},
+ARTICLE-NUMBER = {492},
+URL = {https://www.mdpi.com/2073-4441/14/3/492},
+ISSN = {2073-4441},
+ABSTRACT = {The prediction of monthly rainfall is greatly beneficial for water resources management and flood control projects. Machine learning (ML) techniques, as an increasingly popular approach, have been applied in diverse climatic regions, showing their respective superiority. On top of that, the ensemble learning model that synthesizes the advantages of different ML models deserves more attention. In this study, an ensemble learning model based on stacking approach was proposed. Four prevalent ML models, namely k-nearest neighbors (KNN), extreme gradient boosting (XGB), support vector regression (SVR), and artificial neural networks (ANN) are taken as base models. To combine the outputs from the base models, the weighting algorithm is used as second-layer learner to generate predictions. Large-scale climate indices, large-scale atmospheric variables, and local meteorological variables were used as predictors. R2, RMSE and MAE, were used as evaluation metrics. The results show that the performance of base models varied among the nine stations in the Taihu Basin, while the stacking approach generally performed better than the four base models. The stacking model showed better performance in spring and winter than in summer and autumn. During wet months, the accuracy of model prediction varied more significantly. On the whole, based on performance evaluation measures, it is concluded that the proposed stacking ensemble multi-ML model can provide a flexible and reasonable prediction framework applicable to other regions.},
+DOI = {10.3390/w14030492}
+}
+
+@article{Wen2021WildfireSP,
+  title={Wildfire smoke plume segmentation using geostationary satellite imagery},
+  author={Jeff Wen and M. Burke},
+  journal={ArXiv},
+  year={2021},
+  volume={abs/2109.01637},
+  url={https://api.semanticscholar.org/CorpusID:237416777}
+}
+
+@article{autralia-smoke-ml,
+  author    = {Alexandra Larsen and Ivan Hanigan and Brian J. Reich and Yi Qin and Martin Cope and Geoffrey Morgan and Ana G. Rappold},
+  title     = {A deep learning approach to identify smoke plumes in satellite imagery in near-real time for health risk communication},
+  journal   = {Journal of Exposure Science \& Environmental Epidemiology},
+  year      = {2021},
+  volume    = {31},
+  number    = {1},
+  pages     = {170--176},
+  doi       = {10.1038/s41370-020-0246-y},
+  url       = {https://doi.org/10.1038/s41370-020-0246-y},
+  issn      = {1559-064X},
+  abstract  = {Wildland fire (wildfire; bushfire) pollution contributes to poor air quality, a risk factor for premature death. The frequency and intensity of wildfires are expected to increase; improved tools for estimating exposure to fire smoke are vital. New-generation satellite-based sensors produce high-resolution spectral images, providing real-time information of surface features during wildfire episodes. Because of the vast size of such data, new automated methods for processing information are required.}
+}
+
+@article{canada-smoke-height,
+title = {Predicting the minimum height of forest fire smoke within the atmosphere using machine learning and data from the CALIPSO satellite},
+journal = {Remote Sensing of Environment},
+volume = {206},
+pages = {98-106},
+year = {2018},
+issn = {0034-4257},
+doi = {https://doi.org/10.1016/j.rse.2017.12.027},
+url = {https://www.sciencedirect.com/science/article/pii/S003442571730603X},
+author = {Jiayun Yao and Sean M. Raffuse and Michael Brauer and Grant J. Williamson and David M.J.S. Bowman and Fay H. Johnston and Sarah B. Henderson},
+keywords = {Forest fire smoke, CALIPSO, Vertical profile, Machine learning, Statistical model, Population exposure},
+abstract = {Forest fire smoke is a growing public health concern as more intense and frequent fires are expected under climate change. Remote sensing is a promising tool for exposure assessment, but its utility for health studies is limited because most products measure pollutants in the total column of the atmosphere, and not the surface concentrations most relevant to population health. Information about the vertical distribution of smoke is vital for addressing this limitation. The CALIPSO satellite can provide such information but it cannot cover all smoke events due to its narrow ground track. In this study, we developed a random forests model to predict the minimum height of the smoke layer observed by CALIPSO at high temporal and spatial resolution, using information about fire activity in the vicinity, geographic location, and meteorological conditions. These pieces of information are typically available in near-real-time, ensuring that the resulting model can be easily operationalized. A total of 15,617 CALIPSO data blocks were identified as impacted by smoke within the province of British Columbia, Canada from 2006 to 2015, and 52.1% had smoke within the boundary layer, where the population might be exposed. The final model explained 82.1% of the variance in the observations with a root mean squared error of 560m. The most important variables in the model were wind patterns, the month of smoke observation, and fire intensity within 500km. Predictions from this model can be 1) directly applied to smoke detection from the existing remote sensing products to provide another dimension of information; 2) incorporated into statistical smoke models with inputs from remote sensing products; or 3) used to inform estimates of vertical dispersion in deterministic smoke models. These potential applications are expected to improve the assessment of ground-level population exposure to forest fire smoke.}
+}
+
 @article{wildfire-risk,
 author = {Marshall Burke  and Anne Driscoll  and Sam Heft-Neal  and Jiani Xue  and Jennifer Burney  and Michael Wara },
 title = {The changing risk and burden of wildfire in the United States},

@@ -13,6 +13,27 @@ Wayne~E. Cascio.
 \newblock {\em The Science of the Total Environment}, 624:586--595, 05 2018.
 \newblock Epub 2017 Dec 27.
 
+\bibitem{Wen2021WildfireSP}
+Jeff Wen and M.~Burke.
+\newblock Wildfire smoke plume segmentation using geostationary satellite
+  imagery.
+\newblock {\em ArXiv}, abs/2109.01637, 2021.
+
+\bibitem{canada-smoke-height}
+Jiayun Yao, Sean~M. Raffuse, Michael Brauer, Grant~J. Williamson, David~M.J.S.
+  Bowman, Fay~H. Johnston, and Sarah~B. Henderson.
+\newblock Predicting the minimum height of forest fire smoke within the
+  atmosphere using machine learning and data from the calipso satellite.
+\newblock {\em Remote Sensing of Environment}, 206:98--106, 2018.
+
+\bibitem{autralia-smoke-ml}
+Alexandra Larsen, Ivan Hanigan, Brian~J. Reich, Yi~Qin, Martin Cope, Geoffrey
+  Morgan, and Ana~G. Rappold.
+\newblock A deep learning approach to identify smoke plumes in satellite
+  imagery in near-real time for health risk communication.
+\newblock {\em Journal of Exposure Science \& Environmental Epidemiology},
+  31(1):170--176, 2021.
+
 \bibitem{GOESbook}
 S.~J. Goodman, T.~J. Schmit, J.~Daniels, and R.~J. Redmon.
 \newblock {\em The GOES-R Series: A New Generation of Geostationary
@@ -55,11 +76,6 @@ Giorgio Giacinto and Fabio Roli.
   purposes.
 \newblock {\em Image and Vision Computing}, 19(9):699--707, 2001.
 
-\bibitem{semantic}
-Pavel Iakubovskii.
-\newblock Segmentation models pytorch.
-\newblock \url{https://github.com/qubvel/segmentation_models.pytorch}, 2019.
-
 \bibitem{dlv3p}
 Liang-Chieh Chen, Yukun Zhu, George Papandreou, Florian Schroff, and Hartwig
   Adam.
@@ -75,5 +91,17 @@ Hanchao Li, Pengfei Xiong, Jie An, and Lingxue Wang.
 Zongwei Zhou, Md~Mahfuzur~Rahman Siddiquee, Nima Tajbakhsh, and Jianming Liang.
 \newblock Unet++: A nested u-net architecture for medical image segmentation.
 \newblock {\em CoRR}, abs/1807.10165, 2018.
+
+\bibitem{pm2.5-stack}
+Binxu Zhai and Jianguo Chen.
+\newblock Development of a stacked ensemble model for forecasting and analyzing
+  daily average pm2.5 concentrations in beijing, china.
+\newblock {\em Science of The Total Environment}, 635:644--658, 2018.
+
+\bibitem{rainfall-stack}
+Jiayue Gu, Shuguang Liu, Zhengzheng Zhou, Sergey~R. Chalov, and Qi~Zhuang.
+\newblock A stacking ensemble learning model for monthly rainfall prediction in
+  the taihu basin, china.
+\newblock {\em Water}, 14(3), 2022.
 
 \end{thebibliography}
