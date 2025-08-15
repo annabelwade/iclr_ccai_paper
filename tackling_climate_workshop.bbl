@@ -92,6 +92,14 @@ Zongwei Zhou, Md~Mahfuzur~Rahman Siddiquee, Nima Tajbakhsh, and Jianming Liang.
 \newblock Unet++: A nested u-net architecture for medical image segmentation.
 \newblock {\em CoRR}, abs/1807.10165, 2018.
 
+\bibitem{stacking-smoke-falcao}
+Gonçalo Falcão, Armando~M. Fernandes, Nuno Garcia, Helena Aidos, and Pedro
+  Tomás.
+\newblock Stacking deep learning models for early detection of wildfire smoke
+  plumes.
+\newblock In {\em 2023 31st European Signal Processing Conference (EUSIPCO)},
+  pages 1370--1374, 2023.
+
 \bibitem{pm2.5-stack}
 Binxu Zhai and Jianguo Chen.
 \newblock Development of a stacked ensemble model for forecasting and analyzing
