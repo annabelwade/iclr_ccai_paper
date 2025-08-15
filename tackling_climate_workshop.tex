@@ -90,12 +90,14 @@ With increasing frequency and severity of wildfires, there is an urgent need for
 \end{abstract}
 
 \section{Introduction}
-In the last four decades, wildfire activity has increased drastically in the U.S. In fact, the conditions leading to wildfires have been shown to occur more frequently as a direct result of climate change \citep{wildfire-risk}. Wildfires produce particulate emissions, such as smoke and ash, which can be tracked to quantify the impact a fire has beyond its burn area. Satellite observations reveal that the number of days with smoke in the air have substantially increased in the U.S. during the last two decades \citep{wildfire-risk}. Furthermore, the human impacts of smoke exposure include increased morbidity and mortality as well as downstream economic costs \citep{health-impacts}.
+In the last four decades, wildfire activity has increased drastically in the U.S. In fact, the conditions leading to wildfires have been shown to occur more frequently as a direct result of climate change \citep{wildfire-risk}.  Satellite observations reveal that the number of days with smoke in the air have substantially increased in the U.S. during the last two decades \citep{wildfire-risk}. Furthermore, the human impacts of smoke exposure include increased morbidity and mortality as well as downstream economic costs \citep{health-impacts}. Therefore, it is essential to develop effective, large-scale smoke monitoring tools. 
+% for to protect public health and inform management strategies.
 % Furthermore, future climate predictions reveal that wildfire-related particulate emissions such as smoke and ash could double in fire-prone areas
+% Wildfires produce particulate emissions, such as smoke and ash, which can be tracked to quantify the impact a fire has beyond its burn area.
+% Determining causal links between wildfire activity and health impacts in regions distant from the source fire requires accurate large-scale monitoring of wildfire smoke and its movement. An intuitive approach is to utilize satellite-based methods that can monitor evolution of smoke plumes over large areas.
 
-Determining causal links between wildfire activity and health impacts in regions distant from the source fire requires accurate large-scale monitoring of wildfire smoke and its movement. An intuitive approach is to utilize satellite-based methods that can monitor evolution of smoke plumes over large areas. However, such methods have yet to provide precise and high-frequency information on smoke density, or are confined to small case-study regions \citep{Wen2021WildfireSP, canada-smoke-height, autralia-smoke-ml}. 
-
-% \citep{stacking-smoke-falcao} uses demonstrates an ensemble of deep learning (DL) models to detect
+Satellite imagery can be used to detect and monitor the evolution of smoke over large areas.
+However, such methods have yet to provide precise and high-frequency information on smoke density, or are confined to small case-study regions \citep{Wen2021WildfireSP, canada-smoke-height, autralia-smoke-ml}. 
 
 \section{Background}
 % \subsection{Current large-scale, satellite-based smoke detection} % 
@@ -106,18 +108,21 @@ The National Oceanic and Atmospheric Administration (NOAA) Geostationary Operati
 
 % \subsection{Ensemble techniques}
 % \section{Background: Ensemble techniques}
-This proposal focuses on enhancing the capability of DL models to detect smoke using multi-model ensemble methods. Ensembles, which combine the predictions of multiple models, have been shown to often perform better than a single model in classification tasks \citep{ensemble-ml}. Particularly, utilizing a diverse set of classifiers in an ensemble is important to achieve the improvement in performance \citep{ensemble-diversity}. Furthermore, combining the predictions of multiple independently-trained neural networks can improve generalization and detection accuracy \citep{nn-ensemble,nn-ensemble2, nn-error-ens}. To our knowledge, these ensemble methods have not yet been used for wildfire smoke detection.
+% This proposal focuses on enhancing the capability of DL models to detect smoke using multi-model ensemble methods. 
+Ensembles, which combine the predictions of multiple models, have been shown to often perform better than a single model in classification tasks \citep{ensemble-ml, ensemble-diversity}.  Furthermore, combining the predictions of multiple independently-trained neural networks can improve generalization and accuracy \citep{nn-ensemble,nn-ensemble2, nn-error-ens}. \citep{stacking-smoke-falcao} demonstrated how a stacked ensemble of deep learning (DL) models can be used improve classification of smoke plumes in surveillance camera imagery in Leiria, Portugal. To increase the scale at which smoke can be monitored, we propose using an ensemble of DL models for detecting smoke with satellite imagery. To our knowledge, these ensemble methods have not been applied to smoke detection in GOES imagery at the continental scale of North America.
+% Particularly, utilizing a diverse set of classifiers in an ensemble is important to achieve the improvement in performance \citep{ensemble-diversity}.
 % \citep{nn-error-ens} demonstrated the importance of the neural networks having independent errors, or "error diversity" for the ensemble to succeed.
 % \citep{nn-error-ens} also provided a mathematical basis (clustering of errors) for designing ensembles that contain error diversity between the models.
 
 \section{Proposed methods} 
 We use the SmokeViz dataset (Section \ref{sec:data-code}) which consists of 183,672 smoke plume samples spanning 2018-2024, each with three spectral channels of GOES imagery paired with human analyst annotations of light, medium, or heavy smoke. We use 2018-2021 and 2024 of training, 2023 for validation, and 2022 for the test set, ensuring the testing and validation data years are independent of the training data. During validation and testing, we quantify model performance with Intersection over Union (IoU) score, which measures pixel-wise alignment between the model prediction and the ground truth. The IoU metric supports pathways to climate impact since improved IoU score directly relates to more smoke being accurately detected (reducing false detections and increasing true detections) which equips hazard management to appropriately respond to current wildfire and smoke conditions.
 % We use the SmokeViz dataset which consists of 183,672 smoke plume samples, each with three spectral channels (C01-C03) of GOES imagery paired with human analyst smoke annotations (pixel-wise labels of smoke density of light, medium, or heavy).
+
 We utilize a variety of encoder-decoder architectures designed for semantic segmentation that include different features such as multi-scale fields-of-view and precise boundary detection \citep{dlv3p,PAN,UNetpp}. Additionally, we selected the best-performing single architecture and trained it with 12 seeds to generate different initial random weights. By varying the initialization, the model's parameter space can be searched more fully; ideally, different minima of the loss function will be found. All the models were trained independently for 24 hours on 8 Nvidia P100 GPUs using the Adam optimizer and the binary cross entropy loss function. 
 %  contained within the Segmentation Models Pytorch library \citep{semantic}
 %  which are important for accurately detecting smoke plumes that can vary in size. 
 
-The ensemble method we are using in this preliminary analysis is an unweighted average of $N$ model outputs (Figure \ref{fig:ensemble_framework}), as used in \citep{nn-ensemble2}. We experimented with the ensemble size in supplementary section \ref{sec:ens-size}, and present results here with $N=8$. We create an architecture-based ensemble and a initialization-based ensemble.
+The ensemble method we are using in this preliminary analysis is an unweighted average of $N$ model outputs (Figure \ref{fig:ensemble_framework}), as used in \citep{nn-ensemble2}. We experimented with ensemble size (supplementary section \ref{sec:ens-size}), and present results here with $N=8$. We create an architecture-based ensemble and a initialization-based ensemble.
 
 % \subsection{Dataset} 
 % \subsection{Metrics} 

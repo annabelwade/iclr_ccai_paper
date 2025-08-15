@@ -76,6 +76,14 @@ Giorgio Giacinto and Fabio Roli.
   purposes.
 \newblock {\em Image and Vision Computing}, 19(9):699--707, 2001.
 
+\bibitem{stacking-smoke-falcao}
+Gonçalo Falcão, Armando~M. Fernandes, Nuno Garcia, Helena Aidos, and Pedro
+  Tomás.
+\newblock Stacking deep learning models for early detection of wildfire smoke
+  plumes.
+\newblock In {\em 2023 31st European Signal Processing Conference (EUSIPCO)},
+  pages 1370--1374, 2023.
+
 \bibitem{dlv3p}
 Liang-Chieh Chen, Yukun Zhu, George Papandreou, Florian Schroff, and Hartwig
   Adam.
@@ -91,14 +99,6 @@ Hanchao Li, Pengfei Xiong, Jie An, and Lingxue Wang.
 Zongwei Zhou, Md~Mahfuzur~Rahman Siddiquee, Nima Tajbakhsh, and Jianming Liang.
 \newblock Unet++: A nested u-net architecture for medical image segmentation.
 \newblock {\em CoRR}, abs/1807.10165, 2018.
-
-\bibitem{stacking-smoke-falcao}
-Gonçalo Falcão, Armando~M. Fernandes, Nuno Garcia, Helena Aidos, and Pedro
-  Tomás.
-\newblock Stacking deep learning models for early detection of wildfire smoke
-  plumes.
-\newblock In {\em 2023 31st European Signal Processing Conference (EUSIPCO)},
-  pages 1370--1374, 2023.
 
 \bibitem{pm2.5-stack}
 Binxu Zhai and Jianguo Chen.
