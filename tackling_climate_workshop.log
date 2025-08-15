@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.23)  15 AUG 2025 14:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.23)  15 AUG 2025 15:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -669,7 +669,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 {C:/Users/annab/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/anna
 b/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
-<ensemble_framework.png, id=78, 1282.03969pt x 573.64313pt>
+<ensemble_framework.png, id=79, 1282.03969pt x 573.64313pt>
 File: ensemble_framework.png Graphic file (type png)
 <use ensemble_framework.png>
 Package pdftex.def Info: ensemble_framework.png  used on input line 138.
@@ -678,7 +678,7 @@ Package pdftex.def Info: ensemble_framework.png  used on input line 138.
 Underfull \vbox (badness 1838) has occurred while \output is active []
 
  [2 <./ensemble_framework.png>]
-<ensemble_panel_tinypaper.png, id=100, 1166.6787pt x 267.1581pt>
+<ensemble_panel_tinypaper.png, id=102, 1166.6787pt x 267.1581pt>
 File: ensemble_panel_tinypaper.png Graphic file (type png)
 <use ensemble_panel_tinypaper.png>
 Package pdftex.def Info: ensemble_panel_tinypaper.png  used on input line 166.
@@ -690,12 +690,12 @@ Underfull \hbox (badness 1005) in paragraph at lines 180--181
 0 (+20) . The dataset can be ac-cessed at []$\T1/cmtt/m/n/10 https : / /
  []
 
-<ensemble_size_plot.png, id=126, 912.2883pt x 296.7888pt>
+<ensemble_size_plot.png, id=127, 912.2883pt x 296.7888pt>
 File: ensemble_size_plot.png Graphic file (type png)
 <use ensemble_size_plot.png>
 Package pdftex.def Info: ensemble_size_plot.png  used on input line 188.
 (pdftex.def)             Requested size: 278.23827pt x 90.51366pt.
-<smoothing_ex.png, id=127, 1441.63594pt x 323.70938pt>
+<smoothing_ex.png, id=128, 1441.63594pt x 323.70938pt>
 File: smoothing_ex.png Graphic file (type png)
 <use smoothing_ex.png>
 Package pdftex.def Info: smoothing_ex.png  used on input line 195.
@@ -703,8 +703,11 @@ Package pdftex.def Info: smoothing_ex.png  used on input line 195.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[5 <./ensemble_size_plot.png>] [6 <./smoothing_ex.png>]
-(tackling_climate_workshop.aux)
+
+Underfull \vbox (badness 1418) has occurred while \output is active []
+
+ [5 <./ensemble_size_plot.png>] [6 <./smoothing_ex.png>] (tackling_climate_work
+shop.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -714,13 +717,13 @@ ed.
 (rerunfilecheck)             Checksum: EF4B1326F8C4378AD2F0E0881892007C;1618.
  ) 
 Here is how much of TeX's memory you used:
- 14960 strings out of 474486
- 243870 string characters out of 5743755
+ 14971 strings out of 474486
+ 244150 string characters out of 5743755
  1942542 words of memory out of 5000000
- 36787 multiletter control sequences out of 15000+600000
- 599294 words of font info for 188 fonts, out of 8000000 for 9000
+ 36793 multiletter control sequences out of 15000+600000
+ 599519 words of font info for 190 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 72i,11n,79p,1336b,648s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,11n,79p,1336b,644s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\annab\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt
 1000.pk><C:/Users/annab/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmex10.pfb><C:/Users/annab/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -735,9 +738,9 @@ annab/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/
 annab/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users
 /annab/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users
 /annab/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on tackling_climate_workshop.pdf (6 pages, 2885116 bytes).
+Output written on tackling_climate_workshop.pdf (6 pages, 2886628 bytes).
 PDF statistics:
- 248 PDF objects out of 1000 (max. 8388607)
- 43 named destinations out of 1000 (max. 500000)
+ 251 PDF objects out of 1000 (max. 8388607)
+ 45 named destinations out of 1000 (max. 500000)
  45157 words of extra memory for PDF output out of 51595 (max. 10000000)
 

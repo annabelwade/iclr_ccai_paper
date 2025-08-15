@@ -90,7 +90,7 @@ With increasing frequency and severity of wildfires, there is an urgent need for
 \end{abstract}
 
 \section{Introduction}
-In the last four decades, wildfire activity has increased drastically in the U.S. In fact, the conditions leading to wildfires have been shown to occur more frequently as a direct result of climate change \citep{wildfire-risk}.  Satellite observations reveal that the number of days with smoke in the air have substantially increased in the U.S. during the last two decades \citep{wildfire-risk}. Furthermore, the human impacts of smoke exposure include increased morbidity and mortality as well as downstream economic costs \citep{health-impacts}. Therefore, it is essential to develop effective, large-scale smoke monitoring tools. 
+In the last four decades, wildfire activity has increased drastically in the U.S. In fact, the conditions leading to wildfires have been shown to occur more frequently as a direct result of climate change \citep{wildfire-risk}. Satellite observations reveal that the number of days with smoke in the air have substantially increased in the U.S. during the last two decades \citep{wildfire-risk}. Furthermore, the human impacts of smoke exposure include increased morbidity and mortality as well as downstream economic costs \citep{health-impacts}. Therefore, it is essential to develop effective, large-scale smoke monitoring tools. 
 % for to protect public health and inform management strategies.
 % Furthermore, future climate predictions reveal that wildfire-related particulate emissions such as smoke and ash could double in fire-prone areas
 % Wildfires produce particulate emissions, such as smoke and ash, which can be tracked to quantify the impact a fire has beyond its burn area.
@@ -122,7 +122,7 @@ We utilize a variety of encoder-decoder architectures designed for semantic segm
 %  contained within the Segmentation Models Pytorch library \citep{semantic}
 %  which are important for accurately detecting smoke plumes that can vary in size. 
 
-The ensemble method we are using in this preliminary analysis is an unweighted average of $N$ model outputs (Figure \ref{fig:ensemble_framework}), as used in \citep{nn-ensemble2}. We experimented with ensemble size (supplementary section \ref{sec:ens-size}), and present results here with $N=8$. We create an architecture-based ensemble and a initialization-based ensemble.
+The ensemble method we are using in this preliminary analysis is an unweighted average of $N$ model outputs (Figure \ref{fig:ensemble_framework}), as used in \citep{ensemble-fire-Sivanuja, nn-ensemble2}. We experimented with ensemble size (supplementary section \ref{sec:ens-size}), and present results here with $N=8$. We create an architecture-based ensemble and a initialization-based ensemble.
 
 % \subsection{Dataset} 
 % \subsection{Metrics} 
@@ -145,7 +145,7 @@ Table \ref{tab:results} shows the IoU scores on the test set for individual mode
 Figure \ref{fig:ensemble_panel} shows an example of smoke plume detection from the testing dataset. The ensemble predictions have smoother boundaries than the individual model outputs, making the prediction more comparable to the human analyst-drawn annotations.
 \begin{table}[h]
     \centering
-    \caption{Test IoU results across heavy, medium and light smoke density and over all densities with single models and ensemble schemes.}
+    \caption{Test set IoU results across heavy, medium and light smoke density and over all densities with single models and ensemble schemes.}
     \label{tab:results}
     \begin{tabular}{llrrr>{\bfseries}r}
         \hline
@@ -168,9 +168,9 @@ Figure \ref{fig:ensemble_panel} shows an example of smoke plume detection from t
     % is it intuitive how I listed the panels as (A), (B-C)...
     \label{fig:ensemble_panel}
 \end{figure}
-\section{Limitations and future work} This proposal explores two schemes for building ensembles of DL models that both improve on testing set IoU and smooth annotation boundaries. However, further investigation is required to give insight on how the ensemble reduces error and improves generalizability and what the optimal ensemble size and type are. One area to explore is "stacking", where an optimized meta-model is used to combine multi-model outputs, as used in \cite{stacking-smoke-falcao, pm2.5-stack, rainfall-stack}. Furthermore, future work will utilize the multi-model ensemble to quantify uncertainty in smoke annotations, enabling users like wildfire response teams and environmental agencies to assess the reliability of detections in real time. 
+\section{Limitations and future work} This proposal explores two schemes for building ensembles of DL models that both improve on testing set IoU and smooth annotation boundaries. However, further investigation is required to give insight on how the ensemble reduces error and improves generalizability and what the optimal ensemble size and type are. One area to explore is "stacking", where an optimized meta-model is used to combine multi-model outputs, as used in \cite{stacking-smoke-falcao, ensemble-fire-Sivanuja, stacking-wildfire-severity, pm2.5-stack, rainfall-stack}. Furthermore, future work will utilize the multi-model ensemble to quantify uncertainty in smoke annotations, enabling users like wildfire response teams and environmental agencies to assess the reliability of detections in real time. 
 
-\section{Pathways to climate impact} We propose ensemble methods for improving DL-based smoke detection. Preliminary that can be used to aid fire and hazard management by automating the monitoring of smoke in real-time from satellite imagery with smooth and accurate smoke annotations. This will improve prediction of wildfire movement and air quality impacts, ultimately supporting climate resilience and adaptation strategies.  
+\section{Pathways to climate impact} We propose using multi-model ensembles for smoke detection from satellite imagery and show preliminary results indicating that a DL ensemble can improve model performance. These techniques can be used to aid fire and hazard management by automating the monitoring of smoke in real-time from large-scale satellite imagery with smooth and accurate smoke annotations. This will improve prediction of wildfire movement and air quality impacts, ultimately supporting climate resilience and adaptation strategies.
 
 \newpage
 \bibliographystyle{unsrt}

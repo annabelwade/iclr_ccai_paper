@@ -34,6 +34,17 @@ keywords = {Air quality forecast, Feature extraction, Feature selection, Stacked
 abstract = {A stacked ensemble model is developed for forecasting and analyzing the daily average concentrations of fine particulate matter (PM2.5) in Beijing, China. Special feature extraction procedures, including those of simplification, polynomial, transformation and combination, are conducted before modeling to identify potentially significant features based on an exploratory data analysis. Stability feature selection and tree-based feature selection methods are applied to select important variables and evaluate the degrees of feature importance. Single models including LASSO, Adaboost, XGBoost and multi-layer perceptron optimized by the genetic algorithm (GA-MLP) are established in the level 0 space and are then integrated by support vector regression (SVR) in the level 1 space via stacked generalization. A feature importance analysis reveals that nitrogen dioxide (NO2) and carbon monoxide (CO) concentrations measured from the city of Zhangjiakou are taken as the most important elements of pollution factors for forecasting PM2.5 concentrations. Local extreme wind speeds and maximal wind speeds are considered to extend the most effects of meteorological factors to the cross-regional transportation of contaminants. Pollutants found in the cities of Zhangjiakou and Chengde have a stronger impact on air quality in Beijing than other surrounding factors. Our model evaluation shows that the ensemble model generally performs better than a single nonlinear forecasting model when applied to new data with a coefficient of determination (R2) of 0.90 and a root mean squared error (RMSE) of 23.69μg/m3. For single pollutant grade recognition, the proposed model performs better when applied to days characterized by good air quality than when applied to days registering high levels of pollution. The overall classification accuracy level is 73.93%, with most misclassifications made among adjacent categories. The results demonstrate the interpretability and generalizability of the stacked ensemble model.}
 }
 
+@INPROCEEDINGS{ensemble-fire-Sivanuja,
+  author={Sivanuja, Manthena and Raju, P.J.R Shalem and Prasad, M. and PBV, Raja Rao and Satish Kumar, K. and Sree, P. Kiran},
+  booktitle={2025 International Conference on Computational Robotics, Testing and Engineering Evaluation (ICCRTEE)}, 
+  title={A Novel Ensemble-Based Deep Learning Framework Combining CNN and Transfer Learning Models for Enhanced Wildfire Detection}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1-6},
+  keywords={Deep learning;Wildfires;Accuracy;Biological system modeling;Computational modeling;Transfer learning;Stacking;Robustness;Residual neural networks;Testing;Wildfire detection;Ensemble learning;Transfer learning;Deep learning;Fire classification},
+  doi={10.1109/ICCRTEE64519.2025.11052908}}
+
 @Article{rainfall-stack,
 AUTHOR = {Gu, Jiayue and Liu, Shuguang and Zhou, Zhengzheng and Chalov, Sergey R. and Zhuang, Qi},
 TITLE = {A Stacking Ensemble Learning Model for Monthly Rainfall Prediction in the Taihu Basin, China},
@@ -145,6 +156,20 @@ URL = {{https://doi.org/10.1080/02664763.2018.1441383}}
   pages = {1--15},
   abstract = {Ensemble methods are learning algorithms that construct a set of classifiers and then classify new data points by taking a (weighted) vote of their predictions. The original ensemble method is Bayesian averaging, but more recent algorithms include error-correcting output coding, Bagging, and boosting. This paper reviews these methods and explains why ensembles can often perform better than any single classifier. Some previous studies comparing ensemble methods are reviewed, and some new experiments are presented to uncover the reasons that Adaboost does not overfit rapidly.},
   isbn = {978-3-540-45014-6}
+}
+
+@Article{stacking-wildfire-severity,
+AUTHOR = {Nguyen Van, Linh and Lee, Giha},
+TITLE = {Optimizing Stacked Ensemble Machine Learning Models for Accurate Wildfire Severity Mapping},
+JOURNAL = {Remote Sensing},
+VOLUME = {17},
+YEAR = {2025},
+NUMBER = {5},
+ARTICLE-NUMBER = {854},
+URL = {https://www.mdpi.com/2072-4292/17/5/854},
+ISSN = {2072-4292},
+ABSTRACT = {Wildfires are increasingly frequent and severe, posing substantial risks to ecosystems, communities, and infrastructure. Accurately mapping wildfire severity (WSM) using remote sensing and machine learning (ML) is critical for evaluating damages, informing recovery efforts, and guiding long-term mitigation strategies. Stacking ensemble ML (SEML) enhances predictive accuracy and robustness by combining multiple diverse models into a single meta-learned predictor. This approach leverages the complementary strengths of individual base learners while reducing variance, ultimately improving model reliability. This study aims to optimize a SEML framework to (1) identify the most effective ML models for use as base learners and meta-learners, and (2) determine the optimal number of base models needed for robust and accurate wildfire severity predictions. The study utilizes six ML models—Random Forests (RF), Support Vector Machines (SVM), k-Nearest Neighbors (KNN), Linear Regression (LR), Adaptive Boosting (AB), and Multilayer Perceptron (MLP)—to construct an SEML. To quantify wildfire impacts, we extracted 118 spectral indices from post-fire Landsat-8 data and incorporated four additional predictors (land cover, elevation, slope, and aspect). A dataset of 911 CBI observations from 18 wildfire events was used for training, and models were validated through cross-validation and bootstrapping to ensure robustness. To address multicollinearity and reduce computational complexity, we applied Linear Discriminant Analysis (LDA) and condensed the dataset into three primary components. Our results indicated that simpler models, notably LR and KNN, performed well as meta-learners, with LR achieving the highest predictive accuracy. Moreover, using only two base learners (RF and SVM) was sufficient to realize optimal SEML performance, with an overall accuracy and precision of 0.661, recall of 0.662, and F1-score of 0.656. These findings demonstrate that SEML can enhance wildfire severity mapping by improving prediction accuracy and supporting more informed resource allocation and management decisions. Future research should explore additional meta-learning approaches and incorporate emerging remote sensing data sources such as hyperspectral and LiDAR.},
+DOI = {10.3390/rs17050854}
 }
 
 @INPROCEEDINGS{stacking-smoke-falcao,

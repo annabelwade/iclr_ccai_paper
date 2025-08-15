@@ -100,6 +100,20 @@ Zongwei Zhou, Md~Mahfuzur~Rahman Siddiquee, Nima Tajbakhsh, and Jianming Liang.
 \newblock Unet++: A nested u-net architecture for medical image segmentation.
 \newblock {\em CoRR}, abs/1807.10165, 2018.
 
+\bibitem{ensemble-fire-Sivanuja}
+Manthena Sivanuja, P.J.R~Shalem Raju, M.~Prasad, Raja~Rao PBV, K.~Satish~Kumar,
+  and P.~Kiran Sree.
+\newblock A novel ensemble-based deep learning framework combining cnn and
+  transfer learning models for enhanced wildfire detection.
+\newblock In {\em 2025 International Conference on Computational Robotics,
+  Testing and Engineering Evaluation (ICCRTEE)}, pages 1--6, 2025.
+
+\bibitem{stacking-wildfire-severity}
+Linh Nguyen~Van and Giha Lee.
+\newblock Optimizing stacked ensemble machine learning models for accurate
+  wildfire severity mapping.
+\newblock {\em Remote Sensing}, 17(5), 2025.
+
 \bibitem{pm2.5-stack}
 Binxu Zhai and Jianguo Chen.
 \newblock Development of a stacked ensemble model for forecasting and analyzing
