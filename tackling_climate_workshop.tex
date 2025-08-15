@@ -122,7 +122,7 @@ We utilize a variety of encoder-decoder architectures designed for semantic segm
 %  contained within the Segmentation Models Pytorch library \citep{semantic}
 %  which are important for accurately detecting smoke plumes that can vary in size. 
 
-The ensemble method we are using in this preliminary analysis is an unweighted average of $N$ model outputs (Figure \ref{fig:ensemble_framework}), as used in \citep{ensemble-fire-Sivanuja, nn-ensemble2}. We experimented with ensemble size (supplementary section \ref{sec:ens-size}), and present results here with $N=8$. We create an architecture-based ensemble and a initialization-based ensemble.
+The ensemble method we are using in this preliminary analysis is an unweighted average of $N$ model outputs (Figure \ref{fig:ensemble_framework}), as used in \citep{ensemble-fire-Sivanuja, nn-ensemble2}. We experimented with ensemble size (supplementary section \ref{sec:ens-size}), and present results here with $N=8$. We create an architecture-based ensemble, comprised of the architectures and encoders with the best individual performance, and a initialization-based ensemble, comprised of models with the same architecture (PAN) but different random initializations.
 
 % \subsection{Dataset} 
 % \subsection{Metrics} 
@@ -140,9 +140,9 @@ The ensemble method we are using in this preliminary analysis is an unweighted a
     \label{fig:ensemble_framework}
 \end{SCfigure}
 \section{Preliminary results}
-Table \ref{tab:results} shows the IoU scores on the test set for individual models and ensembles. The ensemble of 8 different architectures outperforms the individual models, with an improvement in all IoU metrics. The ensemble of 8 different initial weights (but the same architecture, PAN) also outperforms the individual models, with a similar improvement in the IoU scores. Future work is necessary to reveal the mechanisms behind the ensemble's improvement in performance, as well as how to optimally select models that are included in the ensemble.
+Table \ref{tab:results} shows the IoU scores on the test set for individual models and ensembles. We report the 2 best-performing architectures, DLV3P \citep{dlv3p} and PAN \citep{PAN}, with additional results in supplementary section \ref{sec:arch-exp}. Both the architecture ensemble and the initialization ensemble outperform the individual models across all IoU metrics. Considering that the test set is independent from the training and validation set, this improvement in performance can be interpreted as an improvement in model generalization. 
+Further, Figure \ref{fig:ensemble_panel} shows an example of smoke plume detection from the testing dataset. The ensemble predictions have smoother boundaries than the individual model outputs, making the prediction more comparable to the human analyst-drawn annotations. Future work will investigate the mechanisms behind the ensemble's improvement in performance and smoothing of boundaries, as well as strategies for optimal ensemble selection.
 
-Figure \ref{fig:ensemble_panel} shows an example of smoke plume detection from the testing dataset. The ensemble predictions have smoother boundaries than the individual model outputs, making the prediction more comparable to the human analyst-drawn annotations.
 \begin{table}[h]
     \centering
     \caption{Test set IoU results across heavy, medium and light smoke density and over all densities with single models and ensemble schemes.}
@@ -152,10 +152,11 @@ Figure \ref{fig:ensemble_panel} shows an example of smoke plume detection from t
             &   Heavy &   Medium &   Light &   Overall \\
         \hline
         Single Model: DLV3P \citep{dlv3p} &   0.347 &     0.441 &  0.666 &      0.599  \\
+        % Single Model: Unet++ \citep{Unet++} &   0.369 &     0.472 &  0.654 &     0.598  \\
         Single Model: PAN \citep{PAN} &  0.349 &     0.478 &  0.664 &      0.604 \\
         Architecture Ensemble &   0.400 &     0.507 &  0.692 &      0.635 \\ % N=8
         %  Architecture Ensemble (N=12) &  0.400 &     0.504 &  0.686 &      0.630 \\
-        Random Initial Weights Ensemble &  0.409 &     0.512 &  0.684 &      0.631 \\% N=8
+        Initialization Ensemble &  0.409 &     0.512 &  0.684 &      0.631 \\% N=8
         %  Random Initial Weights Ensemble (N=12) &   0.409 &     0.515 &  0.690 &      0.635 \\
          \hline
     \end{tabular}
@@ -165,10 +166,9 @@ Figure \ref{fig:ensemble_panel} shows an example of smoke plume detection from t
     \centering
     \includegraphics[width=\textwidth]{ensemble_panel_tinypaper.png}
     \caption{Example of smoke plume detection at (43.37$^{\circ}$, -123.25$^{\circ}$) on 2022/10/15 15:50 UTC. Red, orange, and yellow contours represent heavy, medium and light density smoke annotation/prediction, respectively. (A) displays the ground truth annotation; (B-C) show the predictions of two individual models; (D) shows the prediction of the architecture-based ensemble; (E) shows the prediction of an ensemble made with models initialized with different random weights.}
-    % is it intuitive how I listed the panels as (A), (B-C)...
     \label{fig:ensemble_panel}
 \end{figure}
-\section{Limitations and future work} This proposal explores two schemes for building ensembles of DL models that both improve on testing set IoU and smooth annotation boundaries. However, further investigation is required to give insight on how the ensemble reduces error and improves generalizability and what the optimal ensemble size and type are. One area to explore is "stacking", where an optimized meta-model is used to combine multi-model outputs, as used in \cite{stacking-smoke-falcao, ensemble-fire-Sivanuja, stacking-wildfire-severity, pm2.5-stack, rainfall-stack}. Furthermore, future work will utilize the multi-model ensemble to quantify uncertainty in smoke annotations, enabling users like wildfire response teams and environmental agencies to assess the reliability of detections in real time. 
+\section{Limitations and future work} This proposal explores two schemes for building ensembles of DL models that both improve on testing set IoU and smooth annotation boundaries. However, further investigation is required to give insight on how the ensemble reduces error and improves generalizability, as well as what the optimal ensemble size and type are. One area to explore is model stacking, where an optimized meta-model is used to combine multi-model outputs, as used in \cite{stacking-smoke-falcao, ensemble-fire-Sivanuja, stacking-wildfire-severity, pm2.5-stack, rainfall-stack}. Furthermore, future work will utilize the multi-model ensemble to quantify uncertainty in smoke annotations, enabling users like wildfire response teams and environmental agencies to assess the reliability of detections in real time. 
 
 \section{Pathways to climate impact} We propose using multi-model ensembles for smoke detection from satellite imagery and show preliminary results indicating that a DL ensemble can improve model performance. These techniques can be used to aid fire and hazard management by automating the monitoring of smoke in real-time from large-scale satellite imagery with smooth and accurate smoke annotations. This will improve prediction of wildfire movement and air quality impacts, ultimately supporting climate resilience and adaptation strategies.
 
@@ -176,10 +176,10 @@ Figure \ref{fig:ensemble_panel} shows an example of smoke plume detection from t
 \bibliographystyle{unsrt}
 \bibliography{references} 
 
-\section{Supplementary Material}
+\section{Supplementary material}
 \subsection{Data and Code Availability}\label{sec:data-code} The code for this work is available at \url{https://github.com/anonymous-ensemble-smoke/ensemble-AI-smoke-detection/tree/main}. The dataset can be accessed at \url{https://noaa-gsl-experimental-pds.s3.amazonaws.com/index.html#SmokeViz/}.
 
-\subsection{Ensemble Size Analysis}\label{sec:ens-size} 
+\subsection{Ensemble size analysis}\label{sec:ens-size} 
 Figure \ref{fig:ensemble_size_plot} shows the IoU performance over all smoke densities as a function of ensemble size, $N$, for the two ensemble schemes. The ensemble with different initial weights generally improves as models are added to the ensemble. The ensemble of different architectures improves with more models up to 8 models, but then decreased in IoU with more models added to the ensemble. This decrease in performance could be due to the additional architectures not having enough variation in model bias to improve ensemble performance. Future work will aim to clarify exactly how different ensemble sizes behave and reduce error. 
 
 An additional example from the test data set is shown in Figure \ref{fig:smoothing_ex}, where the individual model output has jagged boundaries and the ensemble outputs smooth over these edges. We see a peak in performance at $N=8$ in this sample where the $N=8$ ensemble has the highest IoU score, and the smoothing does not seem to improve in the $N=12$ ensemble output. This sample supports the proposed idea that ensemble DL can smooth over rough edges in semantic segmentation, and warrants further investigation for the optimal ensemble and how to use the multi-model approach to quantify uncertainty. 
@@ -197,11 +197,38 @@ An additional example from the test data set is shown in Figure \ref{fig:smoothi
     \label{fig:smoothing_ex}
 \end{figure}
 
+\newpage
+\subsection{Architecture analysis}\label{sec:arch-exp}
+We assessed the performance of multiple architectures on our test set (Table \ref{tab:arch-results}). We also experimented with different sizes in the encoder backbone, EfficientNet, where b1 is the smallest encoder, and b3 is the largest encoder we used.
+
+\begin{table}[h]
+    \centering
+    \caption{Test set IoU results across heavy, medium and light smoke density and over all densities using numerous architectures.}
+    \label{tab:arch-results}
+    \begin{tabular}{llrrrr}
+        \hline
+        Architecture   & Encoder &  Heavy &   Medium &   Light &   Overall \\
+        \hline
+        PAN & efficientnet-b2 &  0.349 &     0.478 &  0.664 &      0.604 \\
+        PAN & efficientnet-b1 &   0.364 &     0.468 &  0.648 &      0.590  \\
+        DLV3P & efficientnet-b2 &  0.347 &     0.441 &  0.666 &      0.599  \\
+        DLV3P  & efficientnet-b3 &   0.365 &     0.474 &  0.653 &      0.595 \\
+        Unet++ & efficientnet-b1 &  0.369 &     0.472 &  0.654 &     0.598  \\
+        Unet++ & efficientnet-b2 &   0.354 &     0.464 &  0.662 &      0.597  \\
+        PSPNet & efficientnet-b2 &  0.374 &     0.482 &  0.651 &      0.596  \\
+        MANet & efficientnet-b2 &  0.352 &     0.478 &  0.646 &      0.587  \\
+        LinkNet & efficientnet-b2 &   0.360 &     0.470 &  0.621 &      0.570  \\
+         \hline
+    \end{tabular}
+    \end{table}
+
 \subsection{Intersection Over Union (IoU) formula}
 Equation \ref{overall_iou} provides a mathematical formula for IoU, where $y_{i}$ represents the ground truth and $y^*_{i}$ represents the model's prediction.
 \begin{equation} \label{overall_iou}
     \text{IoU}_{\text{overall}} = {\sum\limits_{i=\text{light}}^{\text{heavy}}|y_{i}\cap y^*_{i}|} \div {\sum\limits_{i=\text{light}}^{\text{heavy}}|y_{i}|\cup|y^*_{i}|}
 \end{equation}
+
+
 %  why the architecture-based ensemble decreases in performance after 8 models,
 
 
