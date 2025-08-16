@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.23)  15 AUG 2025 16:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.1.23)  16 AUG 2025 15:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -708,7 +708,7 @@ L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `tackling_climate_workshop.out' has not chang
 ed.
-(rerunfilecheck)             Checksum: BE7268003D239020423EF1CE61006678;1784.
+(rerunfilecheck)             Checksum: 3B91CE9ACD8F84DDBB2D346F570F02A6;1784.
  ) 
 Here is how much of TeX's memory you used:
  14973 strings out of 474486
@@ -732,7 +732,7 @@ annab/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/
 annab/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users
 /annab/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users
 /annab/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on tackling_climate_workshop.pdf (6 pages, 2888602 bytes).
+Output written on tackling_climate_workshop.pdf (6 pages, 2888444 bytes).
 PDF statistics:
  260 PDF objects out of 1000 (max. 8388607)
  47 named destinations out of 1000 (max. 500000)

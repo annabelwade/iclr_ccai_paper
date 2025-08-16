@@ -177,7 +177,7 @@ Further, Figure \ref{fig:ensemble_panel} shows an example of smoke plume detecti
 \bibliography{references} 
 
 \section{Supplementary material}
-\subsection{Data and Code Availability}\label{sec:data-code} The code for this work is available at \url{https://github.com/anonymous-ensemble-smoke/ensemble-AI-smoke-detection/tree/main}. The dataset can be accessed at \url{https://noaa-gsl-experimental-pds.s3.amazonaws.com/index.html#SmokeViz/}.
+\subsection{Data and code availability}\label{sec:data-code} The code for this work is available at \url{https://github.com/anonymous-ensemble-smoke/ensemble-AI-smoke-detection/tree/main}. The dataset can be accessed at \url{https://noaa-gsl-experimental-pds.s3.amazonaws.com/index.html#SmokeViz/}.
 
 \subsection{Ensemble size analysis}\label{sec:ens-size} 
 Figure \ref{fig:ensemble_size_plot} shows the IoU performance over all smoke densities as a function of ensemble size, $N$, for the two ensemble schemes. The ensemble with different initial weights generally improves as models are added to the ensemble. The ensemble of different architectures improves with more models up to 8 models, but then decreased in IoU with more models added to the ensemble. This decrease in performance could be due to the additional architectures not having enough variation in model bias to improve ensemble performance. Future work will aim to clarify exactly how different ensemble sizes behave and reduce error. 
